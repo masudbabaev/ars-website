@@ -23,7 +23,7 @@ Then open `http://localhost:8080`.
 - `script.js` — language switcher, mobile navigation, and reveal effects
 - `assets/` — ARS logo, board portraits, and source template
 
-The website includes the society's mission, programs, executive board, community call-to-action, and a three-week Early Researcher Workshop.
+The website includes the society's mission, community model, research departments, three-week Early Researcher Workshop, and interactive bilingual profiles for all Executive Board members. Masud Babayev's profile also includes verified APA-style publication records and DOI links.
 
 ## GitHub Pages deployment
 
