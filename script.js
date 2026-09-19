@@ -29,7 +29,7 @@ const profiles = {
   ibrahim: {
     name: "İbrahim Məmmədov",
     roleKey: "roleFounder",
-    image: "assets/ibrahim.webp",
+    image: "assets/ibrahim.webp?v=8",
     bio: {
       az: [
         "İbrahim Məmmədov Azərbaycan Dövlət Neft və Sənaye Universitetində Elektrik mühəndisliyi üzrə bakalavr, Sənaye komplekslərinin avtomatlaşdırılması və elektrik intiqalı üzrə magistr təhsili alıb. Magistratura dövründə müxtəlif şirkətlərdə elektrik mühəndisi kimi çalışıb və inteqrasiya olunmuş monitorinq-idarəetmə sistemi vasitəsilə mancanaq dəzgahının səmərəliliyinin artırılmasını araşdırıb.",
@@ -52,7 +52,7 @@ const profiles = {
   masud: {
     name: "Məsud Babayev",
     roleKey: "roleCofounder",
-    image: "assets/masud.webp",
+    image: "assets/masud.webp?v=8",
     bio: {
       az: [
         "Məsud Babayev Azərbaycan Dövlət Neft və Sənaye Universitetində Neft-qaz mühəndisliyi üzrə bakalavr, Xəzər Universitetində Neft-qaz yataqlarının işlənilməsi üzrə magistr təhsili alıb. Magistratura dövründə SOCAR-da mühəndis kimi çalışıb.",
@@ -80,7 +80,7 @@ const profiles = {
   humay: {
     name: "Humay Zeynalova",
     roleKey: "roleResearch",
-    image: "assets/humay.webp",
+    image: "assets/humay.webp?v=8",
     bio: {
       az: [
         "Humay Zeynalova Koç Universitetində Mexanika mühəndisliyi üzrə bakalavr təhsili alıb və Imperial College London-da Mexanika mühəndisliyi üzrə magistr təhsilini davam etdirir. O, Azərbaycan Respublikasının Dövlət Proqramı təqaüdçüsüdür.",
@@ -100,7 +100,7 @@ const profiles = {
   jale: {
     name: "Jalə Əhmədova",
     roleKey: "roleComms",
-    image: "assets/jale.webp",
+    image: "assets/jale.webp?v=8",
     bio: {
       az: [
         "Jalə Əhmədova Azərbaycan Dillər Universitetində İngilis dili müəllimliyi üzrə bakalavr, Vytautas Magnus Universiteti və Johannes Gutenberg Universitetində Sosiolinqvistika və Multilinqvizm üzrə birgə magistr təhsili alıb. Magistratura çərçivəsində Stockholm Universitetində mübadilə proqramında iştirak edib.",
@@ -120,7 +120,7 @@ const profiles = {
   nargiz: {
     name: "Nərgiz İsmailli",
     roleKey: "roleProject",
-    image: "assets/nargiz.webp",
+    image: "assets/nargiz.webp?v=8",
     bio: {
       az: [
         "Nərgiz İsmailli Xəzər Universitetində Kimya və biologiya müəllimliyi üzrə təhsil alıb. Westlake Summer School çərçivəsində Çində neyroelm və neyrotexnologiya laboratoriyasında qonaq tələbə kimi tədqiqat mühitini müşahidə edib, həmçinin genetika və biokimya laboratoriyalarında praktiki təcrübə qazanıb.",
@@ -140,7 +140,7 @@ const profiles = {
   zehra: {
     name: "Zəhra Omarova",
     roleKey: "roleAdmin",
-    image: "assets/zehra.webp",
+    image: "assets/zehra.webp?v=8",
     bio: {
       az: [
         "Zəhra Omarova Xəzər Universitetində Neft-qaz mühəndisliyi üzrə bakalavr tələbəsidir. O, SPE Khazar, IMechE Khazar və SEG tələbə bölmələrində fəal iştirak edib və SEG Khazar Student Chapter-in prezidenti kimi fəaliyyət göstərib.",
