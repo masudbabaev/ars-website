@@ -1,6 +1,10 @@
 # Azerbaijan Research Society website
 
-A responsive bilingual (Azerbaijani/English) landing page based on the ARS visual identity, prepared for `azresearchsociety.org`.
+A responsive bilingual (Azerbaijani/English) website for the Azerbaijan Research Society. The temporary public address is:
+
+`https://masudbabaev.github.io/ars-website/`
+
+The planned custom domain is `azresearchsociety.org`, but it should only be connected after the domain is purchased.
 
 ## Preview locally
 
@@ -19,14 +23,26 @@ Then open `http://localhost:8080`.
 - `script.js` — language switcher, mobile navigation, and reveal effects
 - `assets/` — ARS logo, board portraits, and source template
 
+The website includes the society's mission, programs, executive board, community call-to-action, and a three-week Early Researcher Workshop.
+
 ## GitHub Pages deployment
 
-1. Create a repository and add the contents of this folder at its root.
-2. In **Settings → Pages**, choose **Deploy from a branch**, then select the main branch and root folder.
-3. Add `azresearchsociety.org` under **Custom domain** before changing DNS records.
-4. Configure the domain's DNS using the values shown by GitHub Pages.
-5. Enable **Enforce HTTPS** after GitHub finishes issuing the certificate.
+1. Upload the contents of this folder directly to the root of `masudbabaev/ars-website`.
+2. Do not upload the ZIP file and do not create another nested `ars-website` folder.
+3. In **Settings → Pages**, choose **Deploy from a branch**.
+4. Select the `main` branch and `/ (root)`, then click **Save**.
+5. Wait a few minutes and open `https://masudbabaev.github.io/ars-website/`.
 
-The included `CNAME`, `robots.txt`, and `sitemap.xml` files are already configured for the selected domain.
+The current metadata, `robots.txt`, and `sitemap.xml` are configured for the temporary GitHub Pages address. There is intentionally no `CNAME` file yet.
+
+## Connecting the custom domain later
+
+After purchasing `azresearchsociety.org`:
+
+1. Open **Settings → Pages** and enter the domain under **Custom domain**.
+2. Follow GitHub's displayed DNS instructions at the domain registrar.
+3. Confirm that GitHub creates a `CNAME` file containing `azresearchsociety.org`.
+4. Replace the temporary GitHub Pages URLs in `index.html`, `robots.txt`, and `sitemap.xml` with `https://azresearchsociety.org/`.
+5. Enable **Enforce HTTPS** after the certificate becomes available.
 
 Before public launch, connect the membership button to the final application form if email applications will not be used.

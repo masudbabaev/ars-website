@@ -17,6 +17,8 @@ body { margin: 0; color: var(--navy); background: var(--white); font-family: Int
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
+[id] { scroll-margin-top: 105px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
 .skip-link { position: fixed; z-index: 100; left: 18px; top: -80px; padding: 10px 16px; color: white; background: var(--navy); border-radius: 8px; }
 .skip-link:focus { top: 12px; }
@@ -88,6 +90,27 @@ button { font: inherit; }
 .program-card p { margin: 0 0 28px; color: #aeb9c7; font-size: .84rem; }
 .program-card a { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.15); font-size: .72rem; font-weight: 800; }
 
+.workshop { background: #f4f8fb; }
+.workshop-intro { display: grid; grid-template-columns: 230px 1fr; gap: 60px; align-items: start; }
+.workshop-badge { display: inline-flex; margin-bottom: 24px; padding: 7px 12px; color: var(--green); background: rgba(21,148,71,.09); border: 1px solid rgba(21,148,71,.2); border-radius: 999px; font-size: .68rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.workshop h2 { max-width: 900px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 5vw, 5.2rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+.workshop h2 em { color: var(--green); font-weight: 400; }
+.workshop-summary { max-width: 720px; margin: 28px 0 0; color: #607488; font-size: 1rem; }
+.workshop-weeks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 65px 0 0; padding: 0; list-style: none; }
+.workshop-week { min-height: 310px; padding: 30px; background: white; border: 1px solid var(--line); border-radius: 24px; }
+.week-number { display: grid; width: 48px; height: 48px; place-items: center; color: white; background: var(--navy); border-radius: 50%; font-family: Georgia, serif; font-size: 1.05rem; }
+.workshop-week:nth-child(2) .week-number { background: var(--red); }
+.workshop-week:nth-child(3) .week-number { background: var(--green); }
+.week-label { margin: 52px 0 7px; color: #8292a1; font-size: .66rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.workshop-week h3 { margin: 0 0 14px; font-size: 1.22rem; line-height: 1.3; }
+.workshop-week > p:last-child { margin: 0; color: #64778a; font-size: .84rem; }
+.workshop-details { display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: center; margin-top: 18px; padding: 27px 30px; color: white; background: var(--navy); border-radius: 24px; }
+.workshop-details > div { display: grid; gap: 4px; }
+.workshop-details strong { color: #5bc7e9; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.workshop-details span { color: #c2ccda; font-size: .78rem; }
+.workshop-details .button { color: var(--navy); background: white; white-space: nowrap; }
+.workshop-details .button span { color: inherit; }
+
 .section-heading.dark h2 em { color: var(--red); }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .person-card { min-height: 398px; padding: 28px 24px 23px; text-align: center; background: #fbfcfd; border: 1px solid #d6e4ec; border-radius: 28px; transition: transform .25s, box-shadow .25s; }
@@ -126,7 +149,8 @@ button { font: inherit; }
   .site-nav { position: fixed; inset: 76px 0 auto; display: none; flex-direction: column; align-items: flex-start; gap: 0; padding: 15px 24px 25px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 12px 25px rgba(7,31,74,.08); }
   .site-nav.open { display: flex; }.site-nav a { width: 100%; padding: 13px 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 45px; padding-block: 70px 35px; }.hero-card { max-width: 520px; }
-  .split-layout, .section-heading { grid-template-columns: 1fr; gap: 28px; }.program-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .split-layout, .section-heading, .workshop-intro { grid-template-columns: 1fr; gap: 28px; }.program-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .workshop-weeks { grid-template-columns: 1fr; }.workshop-week { min-height: 0; }.workshop-details { grid-template-columns: 1fr 1fr; }.workshop-details .button { width: max-content; }
   .community-inner { grid-template-columns: 1fr; gap: 48px; }.community-copy { max-width: 480px; }
 }
 
@@ -135,6 +159,7 @@ button { font: inherit; }
   .hero h1 { font-size: clamp(3rem, 14vw, 4.5rem); }.hero-grid { padding-top: 54px; }.hero-actions { align-items: flex-start; flex-direction: column; }.ribbon { right: -520px; }
   .section { padding: 85px 0; }.about-columns, .stats { grid-template-columns: 1fr; gap: 22px; }.stats { margin-top: 45px; }.stats > div { display: flex; align-items: baseline; gap: 18px; }
   .section-heading { margin-bottom: 45px; }.program-grid, .team-grid { grid-template-columns: 1fr; }.program-card { min-height: 350px; }
+  .workshop-weeks { margin-top: 45px; }.workshop-details { grid-template-columns: 1fr; }.workshop-details .button { width: 100%; }.week-label { margin-top: 35px; }
   .person-card { min-height: 380px; }.community { padding: 85px 0; }.community h2 { font-size: clamp(3rem, 15vw, 4.5rem); }
   .footer-top { grid-template-columns: 1fr; gap: 45px; }.footer-bottom { flex-direction: column; }.footer-bottom span:last-child { line-height: 2; }
 }

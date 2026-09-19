@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma." />
     <meta name="theme-color" content="#071f4a" />
-    <link rel="canonical" href="https://azresearchsociety.org/" />
+    <link rel="canonical" href="https://masudbabaev.github.io/ars-website/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Azerbaijan Research Society" />
     <meta property="og:title" content="Azerbaijan Research Society | ARS" />
     <meta property="og:description" content="Connecting Azerbaijani researchers, students, and science enthusiasts around the world." />
-    <meta property="og:url" content="https://azresearchsociety.org/" />
+    <meta property="og:url" content="https://masudbabaev.github.io/ars-website/" />
+    <meta property="og:image" content="https://masudbabaev.github.io/ars-website/assets/ars-logo.png" />
+    <meta property="og:image:alt" content="Azerbaijan Research Society logo" />
     <meta name="twitter:card" content="summary" />
     <title>Azərbaycan Tədqiqat Cəmiyyəti | ARS</title>
     <link rel="icon" href="assets/ars-logo.png" />
@@ -30,15 +32,16 @@
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="site-nav" id="site-nav" aria-label="Əsas naviqasiya">
+        <nav class="site-nav" id="site-nav" aria-label="Əsas naviqasiya" data-i18n-aria-label="navLabel">
           <a href="#about" data-i18n="navAbout">Haqqımızda</a>
           <a href="#programs" data-i18n="navPrograms">Proqramlar</a>
+          <a href="#workshop" data-i18n="navWorkshop">Emalatxana</a>
           <a href="#team" data-i18n="navTeam">Komanda</a>
           <a href="#community" data-i18n="navCommunity">İcma</a>
           <a href="#contact" data-i18n="navContact">Əlaqə</a>
         </nav>
 
-        <div class="language-switch" role="group" aria-label="Dil seçimi">
+        <div class="language-switch" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageLabel">
           <button type="button" class="lang-button active" data-lang="az" aria-pressed="true">AZ</button>
           <span aria-hidden="true"></span>
           <button type="button" class="lang-button" data-lang="en" aria-pressed="false">EN</button>
@@ -93,7 +96,7 @@
               <p data-i18n="aboutText1">Azərbaycan Tədqiqat Cəmiyyəti (ARS) müxtəlif elm sahələrindən olan azərbaycanlı alim və tələbələr arasında əlaqə yaradan qeyri-kommersiya təşəbbüsüdür.</p>
               <p data-i18n="aboutText2">Məqsədimiz açıq dialoq, mentorluq və multidissiplinar əməkdaşlıq üçün əlçatan mühit formalaşdırmaqdır.</p>
             </div>
-            <div class="stats" aria-label="Society statistics">
+            <div class="stats" aria-label="Cəmiyyət haqqında göstəricilər" data-i18n-aria-label="statsLabel">
               <div><strong>∞</strong><span data-i18n="statBorders">Sərhədsiz əməkdaşlıq</span></div>
               <div><strong>01</strong><span data-i18n="statCommunity">Ortaq elmi icma</span></div>
               <div><strong>04</strong><span data-i18n="statValues">Əsas dəyər</span></div>
@@ -134,10 +137,50 @@
         </div>
       </section>
 
+      <section class="section workshop" id="workshop" aria-labelledby="workshop-title">
+        <div class="container">
+          <div class="workshop-intro reveal">
+            <div class="section-label"><span>03</span><p data-i18n="workshopLabel">Yeni tədqiqatçılar üçün emalatxana</p></div>
+            <div>
+              <span class="workshop-badge" data-i18n="workshopBadge">Pulsuz · Onlayn · 3 həftə</span>
+              <h2 id="workshop-title" data-i18n-html="workshopTitle">Tədqiqat ideyasından<br /><em>nəşrə doğru.</em></h2>
+              <p class="workshop-summary" data-i18n="workshopSummary">Erkən karyera mərhələsində olan tədqiqatçılar üçün üç masterklas, praktiki tapşırıqlar və həftəlik inkişaf yolu.</p>
+            </div>
+          </div>
+
+          <ol class="workshop-weeks">
+            <li class="workshop-week reveal">
+              <span class="week-number">01</span>
+              <p class="week-label" data-i18n="weekOne">1-ci həftə</p>
+              <h3 data-i18n="methodsTitle">Tədqiqat metodları</h3>
+              <p data-i18n="methodsText">Tədqiqat sualı, uyğun metodologiyanın seçilməsi və etibarlı tədqiqat planının qurulması.</p>
+            </li>
+            <li class="workshop-week reveal">
+              <span class="week-number">02</span>
+              <p class="week-label" data-i18n="weekTwo">2-ci həftə</p>
+              <h3 data-i18n="ethicsTitle">Tədqiqat etikası</h3>
+              <p data-i18n="ethicsText">Akademik dürüstlük, məlumatlı razılıq, müəlliflik və məsuliyyətli tədqiqat təcrübəsi.</p>
+            </li>
+            <li class="workshop-week reveal">
+              <span class="week-number">03</span>
+              <p class="week-label" data-i18n="weekThree">3-cü həftə</p>
+              <h3 data-i18n="publishingTitle">Məqalənin jurnala təqdim edilməsi</h3>
+              <p data-i18n="publishingText">Uyğun jurnalın seçilməsi, təqdimat sənədləri və rəy prosesinə hazırlıq.</p>
+            </li>
+          </ol>
+
+          <div class="workshop-details reveal">
+            <div><strong data-i18n="formatTitle">Format</strong><span data-i18n="formatText">Təqdimatçının imkanından asılı olaraq Azərbaycan və ya ingilis dilində</span></div>
+            <div><strong data-i18n="tasksTitle">Həftəlik tapşırıqlar</strong><span data-i18n="tasksText">Hər tapşırıq növbəti mövzu başlamazdan əvvəl tamamlanır</span></div>
+            <a class="button button-primary" href="mailto:az.research.society@gmail.com?subject=ARS%20Early%20Researcher%20Workshop"><span data-i18n="workshopCta">Marağını bildir</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section team" id="team">
         <div class="container">
           <div class="section-heading dark reveal">
-            <div class="section-label"><span>03</span><p data-i18n="teamLabel">İcra Şurası</p></div>
+            <div class="section-label"><span>04</span><p data-i18n="teamLabel">İcra Şurası</p></div>
             <h2 data-i18n-html="teamTitle">İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em></h2>
           </div>
           <div class="team-grid">
@@ -190,7 +233,7 @@
           <p data-i18n="footerTagline">Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.</p>
         </div>
         <div class="footer-links">
-          <div><h3 data-i18n="footerExplore">Kəşf et</h3><a href="#about" data-i18n="navAbout">Haqqımızda</a><a href="#programs" data-i18n="navPrograms">Proqramlar</a><a href="#team" data-i18n="navTeam">Komanda</a></div>
+          <div><h3 data-i18n="footerExplore">Kəşf et</h3><a href="#about" data-i18n="navAbout">Haqqımızda</a><a href="#programs" data-i18n="navPrograms">Proqramlar</a><a href="#workshop" data-i18n="navWorkshop">Emalatxana</a><a href="#team" data-i18n="navTeam">Komanda</a></div>
           <div><h3 data-i18n="footerConnect">Əlaqə</h3><a href="mailto:az.research.society@gmail.com">Email ↗</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7506078298976780288" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://instagram.com/az.research.society" target="_blank" rel="noreferrer">Instagram ↗</a></div>
         </div>
       </div>
@@ -202,7 +245,7 @@
         "@type": "Organization",
         "name": "Azerbaijan Research Society",
         "alternateName": "ARS",
-        "url": "https://azresearchsociety.org/",
+        "url": "https://masudbabaev.github.io/ars-website/",
         "email": "az.research.society@gmail.com",
         "sameAs": [
           "https://instagram.com/az.research.society"
