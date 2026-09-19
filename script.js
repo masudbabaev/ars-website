@@ -7,7 +7,7 @@ const translations = {
     programsLabel: "İcma modeli", programsTitle: "İdeyadan real<br /><em>tədqiqat nəticəsinə.</em>", seminarsTitle: "Tədqiqatçı görüşləri", seminarsText: "Aktiv tədqiqatçılar, onların təcrübəsi və iş istiqamətləri ilə birbaşa tanışlıq.", networkTitle: "Mentor uyğunlaşdırılması", networkText: "Tələbələri maraqlarına uyğun mentor və tədqiqat istiqaməti ilə əlaqələndirmək.", mentorshipTitle: "Aylıq masterklaslar", mentorshipText: "Elmi yazı, məlumatların təhlili, layihə təklifi, qrant və rəy prosesi üzrə praktiki bacarıqlar.", sprintsTitle: "Layihə sprintləri və ortaq laboratoriyalar", sprintsText: "İştirakçıları real tədqiqat problemləri ətrafında birləşdirən nəticə yönümlü əməkdaşlıq.", outputsTitle: "Nəticələrin təqdimatı", outputsText: "Öyrənməni məqalə, poster, məlumat dəsti və təqdimat kimi konkret akademik nəticələrə çevirmək.", learnMore: "Ətraflı", journeyTitle: "Uzunmüddətli hədəf", journeyCommunity: "Tədqiqat icması", journeySociety: "Tədqiqat cəmiyyəti", journeyNetwork: "Tədqiqat şəbəkəsi", journeyCenter: "Müstəqil tədqiqat mərkəzi",
     workshopLabel: "Yeni tədqiqatçılar üçün emalatxana", workshopBadge: "Pulsuz · Onlayn · 3 həftə", workshopTitle: "Tədqiqat ideyasından<br /><em>nəşrə doğru.</em>", workshopSummary: "Erkən karyera mərhələsində olan tədqiqatçılar üçün üç masterklas, praktiki tapşırıqlar və həftəlik inkişaf yolu.", weekOne: "1-ci həftə", weekTwo: "2-ci həftə", weekThree: "3-cü həftə", methodsTitle: "Tədqiqat metodları", methodsText: "Tədqiqat sualı, uyğun metodologiyanın seçilməsi və etibarlı tədqiqat planının qurulması.", ethicsTitle: "Tədqiqat etikası", ethicsText: "Akademik dürüstlük, məlumatlı razılıq, müəlliflik və məsuliyyətli tədqiqat təcrübəsi.", publishingTitle: "Məqalənin jurnala təqdim edilməsi", publishingText: "Uyğun jurnalın seçilməsi, təqdimat sənədləri və rəy prosesinə hazırlıq.", formatTitle: "Format", formatText: "Təqdimatçının imkanından asılı olaraq Azərbaycan və ya ingilis dilində", tasksTitle: "Həftəlik tapşırıqlar", tasksText: "Hər tapşırıq növbəti mövzu başlamazdan əvvəl tamamlanır", workshopCta: "Marağını bildir",
     departmentsLabel: "Elmi şöbələr", departmentsTitle: "Fərqli sahələr.<br /><em>Ortaq suallar.</em>", engineeringTitle: "Mühəndislik və tətbiqi texnologiyalar", engineeringText: "Enerji, mexanika, materiallar və sənaye texnologiyaları üzrə əməkdaşlıq.", lifeTitle: "Təbiət və həyat elmləri", lifeText: "Biologiya, kimya, neyroelm və ətraf mühit üzrə fənlərarası araşdırmalar.", dataTitle: "Data, süni intellekt və riyazi elmlər", dataText: "Məlumatların təhlili, modelləşdirmə, süni intellekt və hesablama metodları.", socialTitle: "Sosial və humanitar elmlər", socialText: "Dilçilik, təhsil, cəmiyyət və mədəniyyət üzrə tədqiqat və dialoq.", departmentNote: "Üzvlər maraq və təcrübələrinə uyğun olaraq maksimum iki şöbədə iştirak edə bilərlər.",
-    teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
+    teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Əlaqə, elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", email: "E-poçt", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
     communityKicker: "Elmin gələcəyində sənin də yerin var", communityTitle: "Maraq göstər.<br />Əlaqə qur.<br /><em>Təsir yarat.</em>", communityText: "Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.", becomeMember: "Üzv olmaq üçün yaz",
     footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
   },
@@ -19,7 +19,7 @@ const translations = {
     programsLabel: "Community model", programsTitle: "From an idea to a real<br /><em>research outcome.</em>", seminarsTitle: "Researcher meetups", seminarsText: "Direct exposure to active researchers, their experience, and areas of work.", networkTitle: "Mentor matching", networkText: "Connecting students with mentors and research directions that fit their interests.", mentorshipTitle: "Monthly masterclasses", mentorshipText: "Practical skills in academic writing, data analysis, proposals, grants, and peer review.", sprintsTitle: "Project sprints & shared labs", sprintsText: "Result-oriented collaboration bringing participants together around real research problems.", outputsTitle: "Presenting results", outputsText: "Turning learning into papers, posters, datasets, presentations, and other concrete academic outputs.", learnMore: "Learn more", journeyTitle: "Long-term goal", journeyCommunity: "Research community", journeySociety: "Research society", journeyNetwork: "Research network", journeyCenter: "Independent research center",
     workshopLabel: "Early Researcher Workshop", workshopBadge: "Free · Online · 3 weeks", workshopTitle: "From a research idea<br /><em>to publication.</em>", workshopSummary: "Three masterclasses, practical assignments, and a structured weekly journey for early-career researchers.", weekOne: "Week 1", weekTwo: "Week 2", weekThree: "Week 3", methodsTitle: "Research Methods", methodsText: "Developing a research question, selecting an appropriate methodology, and building a sound research plan.", ethicsTitle: "Research Ethics", ethicsText: "Academic integrity, informed consent, authorship, and responsible research practice.", publishingTitle: "How to Submit a Paper", publishingText: "Choosing a suitable journal, preparing submission materials, and navigating peer review.", formatTitle: "Format", formatText: "Delivered in Azerbaijani or English depending on the presenter and material availability", tasksTitle: "Weekly assignments", tasksText: "Each assignment is completed before the following week's topic begins", workshopCta: "Register interest",
     departmentsLabel: "Research departments", departmentsTitle: "Different fields.<br /><em>Shared questions.</em>", engineeringTitle: "Engineering & applied technology", engineeringText: "Collaboration across energy, mechanics, materials, and industrial technologies.", lifeTitle: "Natural & life sciences", lifeText: "Interdisciplinary work in biology, chemistry, neuroscience, and the environment.", dataTitle: "Data, AI & mathematical sciences", dataText: "Data analysis, modelling, artificial intelligence, and computational methods.", socialTitle: "Social sciences & humanities", socialText: "Research and dialogue across linguistics, education, society, and culture.", departmentNote: "Members may participate in up to two departments based on their interests and experience.",
-    teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Academic & professional profiles", profilePublications: "Selected publications", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
+    teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Contact, academic & professional profiles", profilePublications: "Selected publications", email: "Email", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
     communityKicker: "You have a place in the future of science", communityTitle: "Stay curious.<br />Make connections.<br /><em>Create impact.</em>", communityText: "Whether you are a researcher, student, mentor, or science enthusiast, the ARS community is open to you.", becomeMember: "Write to become a member",
     footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
   }
@@ -45,6 +45,7 @@ const profiles = {
       en: ["Solid-state physics", "DFT & first principles", "Superconducting materials", "Electronic & phonon properties"]
     },
     links: [
+      { labelKey: "email", text: "ibrahim.mammadov@azresearchsociety.org", url: "mailto:ibrahim.mammadov@azresearchsociety.org" },
       { labelKey: "linkedIn", url: "https://www.linkedin.com/in/ibrahim-mammadov2024/" },
       { labelKey: "googleScholar", url: "https://scholar.google.com/citations?hl=en&user=jq8s5RAAAAAJ" }
     ]
@@ -68,6 +69,7 @@ const profiles = {
       en: ["Gas hydrates", "Molecular dynamics", "Reservoir modelling", "CO₂ sequestration", "SAGD optimization"]
     },
     links: [
+      { labelKey: "email", text: "masud.babayev@azresearchsociety.org", url: "mailto:masud.babayev@azresearchsociety.org" },
       { labelKey: "linkedIn", url: "https://www.linkedin.com/in/masudbabayev" },
       { labelKey: "googleScholar", url: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=AyVFs9oAAAAJ" }
     ],
@@ -95,7 +97,10 @@ const profiles = {
       az: ["Maye mexanikası", "Hesablama maye mexanikası", "Turbulent axınlar", "Maşın dizaynı"],
       en: ["Fluid mechanics", "Computational fluid dynamics", "Turbulent flows", "Machine design"]
     },
-    links: [{ labelKey: "linkedIn", url: "https://www.linkedin.com/in/humayzeynalova/" }]
+    links: [
+      { labelKey: "email", text: "humay.zeynalova@azresearchsociety.org", url: "mailto:humay.zeynalova@azresearchsociety.org" },
+      { labelKey: "linkedIn", url: "https://www.linkedin.com/in/humayzeynalova/" }
+    ]
   },
   jale: {
     name: "Jalə Əhmədova",
@@ -115,7 +120,10 @@ const profiles = {
       az: ["Sosiolinqvistika", "Multilinqvizm və dil təması", "Kod-dəyişmə", "Dil variasiyası və ideologiyaları"],
       en: ["Sociolinguistics", "Multilingualism & language contact", "Code-switching", "Language variation & ideologies"]
     },
-    links: [{ labelKey: "linkedIn", url: "https://www.linkedin.com/in/zhala-artemis-ahmadova-a09b4b172/" }]
+    links: [
+      { labelKey: "email", text: "zhala.ahmadova@azresearchsociety.org", url: "mailto:zhala.ahmadova@azresearchsociety.org" },
+      { labelKey: "linkedIn", url: "https://www.linkedin.com/in/zhala-artemis-ahmadova-a09b4b172/" }
+    ]
   },
   nargiz: {
     name: "Nərgiz İsmailli",
@@ -135,7 +143,10 @@ const profiles = {
       az: ["Neyroelm və neyrotexnologiya", "Bioinformatika və data elmi", "Hesablama biologiyası", "Molekulyar və hüceyrəvi tədqiqatlar"],
       en: ["Neuroscience & neurotechnology", "Bioinformatics & data science", "Computational biology", "Molecular & cellular research"]
     },
-    links: [{ labelKey: "linkedIn", url: "https://www.linkedin.com/in/nargiz-ismay%C4%B1ll%C4%B1/" }]
+    links: [
+      { labelKey: "email", text: "nargiz.ismayilli@azresearchsociety.org", url: "mailto:nargiz.ismayilli@azresearchsociety.org" },
+      { labelKey: "linkedIn", url: "https://www.linkedin.com/in/nargiz-ismay%C4%B1ll%C4%B1/" }
+    ]
   },
   zehra: {
     name: "Zəhra Omarova",
@@ -155,7 +166,10 @@ const profiles = {
       az: ["Lay modelləşdirilməsi", "Maşın öyrənməsi", "Hasilatın optimallaşdırılması", "Lay parametrlərinin proqnozu"],
       en: ["Reservoir modelling", "Machine learning", "Production optimization", "Reservoir-parameter prediction"]
     },
-    links: [{ labelKey: "linkedIn", url: "https://www.linkedin.com/in/zahra-omarova-9040ba297/" }]
+    links: [
+      { labelKey: "email", text: "zahra.omarova@azresearchsociety.org", url: "mailto:zahra.omarova@azresearchsociety.org" },
+      { labelKey: "linkedIn", url: "https://www.linkedin.com/in/zahra-omarova-9040ba297/" }
+    ]
   }
 };
 
@@ -212,6 +226,14 @@ function makeExternalLink(label, url) {
   return link;
 }
 
+function makeProfileLink(item, dictionary) {
+  if (!item.url.startsWith("mailto:")) return makeExternalLink(dictionary[item.labelKey], item.url);
+  const link = document.createElement("a");
+  link.href = item.url;
+  link.textContent = `${dictionary[item.labelKey]}: ${item.text}`;
+  return link;
+}
+
 function renderProfile(profileId) {
   const data = profiles[profileId];
   if (!data) return;
@@ -235,7 +257,7 @@ function renderProfile(profileId) {
     return tag;
   }));
 
-  profileLinks.replaceChildren(...data.links.map((item) => makeExternalLink(dictionary[item.labelKey], item.url)));
+  profileLinks.replaceChildren(...data.links.map((item) => makeProfileLink(item, dictionary)));
 
   const publications = data.publications || [];
   profilePublicationsSection.hidden = publications.length === 0;
