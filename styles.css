@@ -157,6 +157,13 @@ button { font: inherit; }
 .flag-line i { width: 35px; height: 4px; }.flag-line i:nth-child(1) { background: var(--blue); }.flag-line i:nth-child(2) { background: var(--red); }.flag-line i:nth-child(3) { background: var(--green); }
 .profile-open { margin-top: 18px; padding: 8px 14px; color: var(--navy); background: white; border: 1px solid #cbdbe5; border-radius: 999px; cursor: pointer; font-size: .69rem; font-weight: 800; transition: color .2s, background .2s, border-color .2s; }
 .person-card:hover .profile-open, .profile-open:focus-visible { color: white; background: var(--navy); border-color: var(--navy); }
+.advisory-board { margin-top: 105px; padding-top: 78px; border-top: 1px solid var(--line); }
+.advisory-heading { display: grid; grid-template-columns: .65fr 1.35fr; gap: 50px; align-items: end; margin-bottom: 54px; }
+.advisory-heading h2 { max-width: 760px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 5.6vw, 5.5rem); font-weight: 400; line-height: .98; letter-spacing: -.045em; }
+.advisory-heading h2 em { color: var(--green); font-weight: 400; }
+.advisory-card { position: relative; background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%); border-color: #c8dce8; }
+.advisory-card::before { content: ""; position: absolute; inset: 0 26px auto; height: 4px; background: linear-gradient(90deg, var(--blue) 0 32%, var(--red) 32% 66%, var(--green) 66%); border-radius: 0 0 4px 4px; }
+.advisory-card .portrait-wrap { box-shadow: 0 0 0 4px #fff, 0 0 0 6px #d5e7f0; }
 
 .profile-dialog { width: min(920px, calc(100% - 32px)); max-height: min(88vh, 900px); margin: auto; padding: 0; color: var(--navy); background: white; border: 0; border-radius: 28px; box-shadow: 0 35px 100px rgba(4,19,45,.28); }
 .profile-dialog::backdrop { background: rgba(4,19,45,.72); backdrop-filter: blur(5px); }
@@ -234,7 +241,7 @@ button { font: inherit; }
   .site-nav { position: fixed; inset: 84px 0 auto; display: none; flex-direction: column; align-items: flex-start; gap: 0; padding: 15px 24px 25px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 12px 25px rgba(7,31,74,.08); }
   .site-nav.open { display: flex; }.site-nav a { width: 100%; padding: 13px 0; }
   .hero { min-height: calc(100vh - 84px); }.hero-grid { grid-template-columns: 1fr; gap: 45px; padding-block: 70px 35px; }.hero-card { max-width: 520px; }
-  .split-layout, .section-heading, .workshop-intro { grid-template-columns: 1fr; gap: 28px; }.program-grid, .team-grid, .department-grid { grid-template-columns: repeat(2, 1fr); }
+  .split-layout, .section-heading, .workshop-intro, .advisory-heading { grid-template-columns: 1fr; gap: 28px; }.program-grid, .team-grid, .department-grid { grid-template-columns: repeat(2, 1fr); }
   .program-card, .community-model .program-card:nth-child(4), .community-model .program-card:nth-child(5) { grid-column: auto; }
   .journey { flex-wrap: wrap; }.journey strong { width: 100%; }.journey i { transform: rotate(90deg); }
   .workshop-weeks { grid-template-columns: 1fr; }.workshop-week { min-height: 0; }.workshop-details { grid-template-columns: 1fr 1fr; }.workshop-details .button { width: max-content; }
@@ -247,6 +254,7 @@ button { font: inherit; }
   .hero h1 { font-size: clamp(3rem, 14vw, 4.5rem); }.hero-grid { padding-top: 54px; }.hero-actions { align-items: flex-start; flex-direction: column; }.ribbon { right: -520px; }
   .section { padding: 85px 0; }.about-columns, .purpose-grid, .stats { grid-template-columns: 1fr; gap: 22px; }.stats { margin-top: 45px; }.stats > div { display: flex; align-items: baseline; gap: 18px; }
   .section-heading { margin-bottom: 45px; }.program-grid, .team-grid, .department-grid { grid-template-columns: 1fr; }.program-card { min-height: 350px; }
+  .advisory-board { margin-top: 72px; padding-top: 58px; }.advisory-heading { margin-bottom: 42px; }
   .journey { align-items: flex-start; flex-direction: column; }.journey i { transform: rotate(90deg); }.department-card { min-height: 230px; }.department-note { text-align: left; }
   .workshop-weeks { margin-top: 45px; }.workshop-details { grid-template-columns: 1fr; }.workshop-details .button { width: 100%; }.week-label { margin-top: 35px; }
   .person-card { min-height: 380px; }.community { padding: 85px 0; }.community h2 { font-size: clamp(3rem, 15vw, 4.5rem); }
