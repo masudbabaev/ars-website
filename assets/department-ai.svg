@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <g stroke="#fff" stroke-linecap="round">
+    <g opacity=".32" stroke-width="1.4">
+      <path d="M38 30 119 22m-81 8 81 45m-81-45 81 98m-81-49 81-57m-81 57 81-4m-81 4 81 49m-81 22 81-79m-81 79 81-26m-81 26 81 27M119 22l83 15m-83-15 83 47m-83-47 83 80m-83-27 83-38m-83 38 83-6m-83 6 83 33m-83 20 83-59m-83 59 83-26m-83 26 83 5m0-100 77 34m-77-2 77 2m-77 35 77-33m-77 33 77 2m-77 31 77-29"/>
+    </g>
+    <g fill="#fff" stroke="none">
+      <g opacity=".72"><circle cx="38" cy="30" r="6"/><circle cx="38" cy="79" r="6"/><circle cx="38" cy="150" r="6"/></g>
+      <g opacity=".9"><circle cx="119" cy="22" r="7"/><circle cx="119" cy="75" r="7"/><circle cx="119" cy="128" r="7"/></g>
+      <g opacity=".9"><circle cx="202" cy="37" r="7"/><circle cx="202" cy="69" r="7"/><circle cx="202" cy="102" r="7"/><circle cx="202" cy="133" r="7"/></g>
+      <g><circle cx="279" cy="67" r="9"/><circle cx="279" cy="104" r="9"/></g>
+    </g>
+    <path opacity=".65" stroke-width="2" d="M20 164h282M21 153v11m22-19v19m22-7v7m22-27v27"/>
+  </g>
+</svg>

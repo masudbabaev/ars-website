@@ -21,9 +21,9 @@ Then open `http://localhost:8080`.
 - `index.html` — page structure and bilingual content
 - `styles.css` — responsive ARS visual system
 - `script.js` — language switcher, mobile navigation, and reveal effects
-- `assets/` — ARS logo, board portraits, and source template
+- `assets/` — ARS logo, optimized board portraits, department visualizations, and source template
 
-The website includes the society's mission, community model, research departments, three-week Early Researcher Workshop, and interactive bilingual profiles for all Executive Board members. Masud Babayev's profile also includes verified APA-style publication records and DOI links.
+The website includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and interactive bilingual profiles for all Executive Board members. Masud Babayev's profile also includes verified APA-style publication records and DOI links.
 
 ## GitHub Pages deployment
 
