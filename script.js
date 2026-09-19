@@ -9,6 +9,7 @@ const translations = {
     departmentsLabel: "Elmi şöbələr", departmentsTitle: "Fərqli sahələr.<br /><em>Ortaq suallar.</em>", engineeringTitle: "Mühəndislik və tətbiqi texnologiyalar", engineeringText: "Enerji, mexanika, materiallar və sənaye texnologiyaları üzrə əməkdaşlıq.", lifeTitle: "Təbiət və həyat elmləri", lifeText: "Biologiya, kimya, neyroelm və ətraf mühit üzrə fənlərarası araşdırmalar.", dataTitle: "Data, süni intellekt və riyazi elmlər", dataText: "Məlumatların təhlili, modelləşdirmə, süni intellekt və hesablama metodları.", socialTitle: "Sosial və humanitar elmlər", socialText: "Dilçilik, təhsil, cəmiyyət və mədəniyyət üzrə tədqiqat və dialoq.", departmentNote: "Üzvlər maraq və təcrübələrinə uyğun olaraq maksimum iki şöbədə iştirak edə bilərlər.",
     teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Əlaqə, elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", email: "E-poçt", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
     communityKicker: "Elmin gələcəyində sənin də yerin var", communityTitle: "Maraq göstər.<br />Əlaqə qur.<br /><em>Təsir yarat.</em>", communityText: "Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.", becomeMember: "Üzv olmaq üçün yaz",
+    contactLabel: "Əlaqə", contactTitle: "Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em>", contactIntro: "Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.", formName: "Ad və soyad", formEmail: "E-poçt ünvanı", formOrganization: "Universitet və ya təşkilat", formCountry: "Ölkə", formTopic: "Müraciətin mövzusu", formChooseTopic: "Mövzu seçin", topicMembership: "Üzvlük", topicWorkshop: "Təlim və tədbirlər", topicPartnership: "Tərəfdaşlıq", topicSpeaker: "Spiker təklifi", topicAdvisory: "Elmi Məsləhət Şurası", topicGeneral: "Ümumi müraciət", topicOther: "Digər", formMessage: "Mesaj", formConsent: "Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.", formSubmit: "Mesajı göndər", formSending: "Göndərilir…", formSuccess: "Təşəkkür edirik. Mesajınız ARS komandasına göndərildi.", formError: "Mesaj göndərilmədi. Bir qədər sonra yenidən cəhd edin və ya bizə e-poçt göndərin.",
     footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
   },
   en: {
@@ -21,6 +22,7 @@ const translations = {
     departmentsLabel: "Research departments", departmentsTitle: "Different fields.<br /><em>Shared questions.</em>", engineeringTitle: "Engineering & applied technology", engineeringText: "Collaboration across energy, mechanics, materials, and industrial technologies.", lifeTitle: "Natural & life sciences", lifeText: "Interdisciplinary work in biology, chemistry, neuroscience, and the environment.", dataTitle: "Data, AI & mathematical sciences", dataText: "Data analysis, modelling, artificial intelligence, and computational methods.", socialTitle: "Social sciences & humanities", socialText: "Research and dialogue across linguistics, education, society, and culture.", departmentNote: "Members may participate in up to two departments based on their interests and experience.",
     teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Contact, academic & professional profiles", profilePublications: "Selected publications", email: "Email", linkedIn: "LinkedIn", googleScholar: "Google Scholar",
     communityKicker: "You have a place in the future of science", communityTitle: "Stay curious.<br />Make connections.<br /><em>Create impact.</em>", communityText: "Whether you are a researcher, student, mentor, or science enthusiast, the ARS community is open to you.", becomeMember: "Write to become a member",
+    contactLabel: "Contact", contactTitle: "Have a question or an idea?<br /><em>Write to us.</em>", contactIntro: "Use this form for membership, events, partnerships, and scientific collaboration enquiries.", formName: "Full name", formEmail: "Email address", formOrganization: "University or organization", formCountry: "Country", formTopic: "Reason for contacting", formChooseTopic: "Choose a topic", topicMembership: "Membership", topicWorkshop: "Workshops and events", topicPartnership: "Partnership", topicSpeaker: "Speaker proposal", topicAdvisory: "Scientific Advisory Board", topicGeneral: "General enquiry", topicOther: "Other", formMessage: "Message", formConsent: "I agree that my information may be processed for the purpose of responding to my enquiry.", formSubmit: "Send message", formSending: "Sending…", formSuccess: "Thank you. Your message has been sent to the ARS team.", formError: "Your message could not be sent. Please try again later or email us directly.",
     footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
   }
 };
@@ -214,6 +216,7 @@ function setLanguage(language) {
   document.querySelector('meta[property="og:description"]').setAttribute("content", dictionary.metaDescription);
   menuButton.setAttribute("aria-label", navigation.classList.contains("open") ? dictionary.menuClose : dictionary.menuOpen);
   if (currentProfile && profileDialog.open) renderProfile(currentProfile);
+  updateContactFormLanguage();
   try { localStorage.setItem("ars-language", language); } catch (error) { /* Storage may be unavailable in private browsing. */ }
 }
 
@@ -299,6 +302,67 @@ navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click"
   navigation.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
 }));
+
+const contactForm = document.getElementById("ars-contact-form");
+const contactTopic = document.getElementById("contact-topic");
+const contactStatus = document.getElementById("form-status");
+const contactSubmitButton = contactForm.querySelector('button[type="submit"]');
+const contactSubmitLabel = contactSubmitButton.querySelector("span");
+
+function updateContactFormLanguage() {
+  const language = document.documentElement.lang in translations ? document.documentElement.lang : "az";
+  const dictionary = translations[language];
+  contactSubmitLabel.textContent = contactSubmitButton.disabled ? dictionary.formSending : dictionary.formSubmit;
+  if (contactStatus.dataset.state === "success") contactStatus.textContent = dictionary.formSuccess;
+  if (contactStatus.dataset.state === "error") contactStatus.textContent = dictionary.formError;
+}
+
+function setContactStatus(state) {
+  contactStatus.dataset.state = state;
+  contactStatus.className = `form-status${state ? ` ${state}` : ""}`;
+  contactStatus.textContent = "";
+  updateContactFormLanguage();
+}
+
+document.querySelectorAll("[data-form-topic]").forEach((link) => {
+  link.addEventListener("click", () => {
+    contactTopic.value = link.dataset.formTopic;
+    setContactStatus("");
+  });
+});
+
+contactForm.addEventListener("input", () => {
+  if (contactStatus.dataset.state) setContactStatus("");
+});
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  contactSubmitButton.disabled = true;
+  setContactStatus("");
+  updateContactFormLanguage();
+
+  const formData = new FormData(contactForm);
+  const selectedTopic = contactTopic.options[contactTopic.selectedIndex]?.textContent || "General enquiry";
+  const senderName = formData.get("name") || "Website visitor";
+  formData.set("_subject", `ARS website — ${selectedTopic} — ${senderName}`);
+  formData.set("language", document.documentElement.lang);
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
+    if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+    contactForm.reset();
+    setContactStatus("success");
+  } catch (error) {
+    setContactStatus("error");
+  } finally {
+    contactSubmitButton.disabled = false;
+    updateContactFormLanguage();
+  }
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && navigation.classList.contains("open")) {

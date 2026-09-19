@@ -17,8 +17,8 @@
     <title>Azərbaycan Tədqiqat Cəmiyyəti | ARS</title>
     <link rel="icon" href="assets/ars-logo.png?v=10" />
     <link rel="preload" as="image" href="assets/ars-logo.png?v=10" />
-    <link rel="stylesheet" href="styles.css?v=12" />
-    <script src="script.js?v=12" defer></script>
+    <link rel="stylesheet" href="styles.css?v=13" />
+    <script src="script.js?v=13" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a>
@@ -39,7 +39,7 @@
           <a href="#workshop" data-i18n="navWorkshop">Emalatxana</a>
           <a href="#departments" data-i18n="navDepartments">Şöbələr</a>
           <a href="#team" data-i18n="navTeam">Komanda</a>
-          <a href="#contact" data-i18n="navContact">Əlaqə</a>
+          <a href="#contact-form" data-i18n="navContact">Əlaqə</a>
         </nav>
 
         <div class="language-switch" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageLabel">
@@ -125,7 +125,7 @@
               <div class="program-icon" aria-hidden="true">⌁</div>
               <h3 data-i18n="seminarsTitle">Tədqiqatçı görüşləri</h3>
               <p data-i18n="seminarsText">Aktiv tədqiqatçılar, onların təcrübəsi və iş istiqamətləri ilə birbaşa tanışlıq.</p>
-              <a href="#contact"><span data-i18n="learnMore">Ətraflı</span><span>↗</span></a>
+              <a href="#contact-form"><span data-i18n="learnMore">Ətraflı</span><span>↗</span></a>
             </article>
             <article class="program-card reveal">
               <span class="program-index">02</span>
@@ -195,7 +195,7 @@
           <div class="workshop-details reveal">
             <div><strong data-i18n="formatTitle">Format</strong><span data-i18n="formatText">Təqdimatçının imkanından asılı olaraq Azərbaycan və ya ingilis dilində</span></div>
             <div><strong data-i18n="tasksTitle">Həftəlik tapşırıqlar</strong><span data-i18n="tasksText">Hər tapşırıq növbəti mövzu başlamazdan əvvəl tamamlanır</span></div>
-            <a class="button button-primary" href="mailto:info@azresearchsociety.org?subject=ARS%20Early%20Researcher%20Workshop"><span data-i18n="workshopCta">Marağını bildir</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="button button-primary" href="#contact-form" data-form-topic="workshop"><span data-i18n="workshopCta">Marağını bildir</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </div>
         </div>
       </section>
@@ -271,8 +271,51 @@
           </div>
           <div class="community-copy">
             <p data-i18n="communityText">Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.</p>
-            <a class="button button-light" href="mailto:info@azresearchsociety.org?subject=ARS%20membership"><span data-i18n="becomeMember">Üzv olmaq üçün yaz</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="button button-light" href="#contact-form" data-form-topic="membership"><span data-i18n="becomeMember">Üzv olmaq üçün yaz</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact-form" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div class="contact-intro reveal">
+            <div class="section-label"><span>05</span><p data-i18n="contactLabel">Əlaqə</p></div>
+            <h2 id="contact-title" data-i18n-html="contactTitle">Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em></h2>
+            <p data-i18n="contactIntro">Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.</p>
+            <a class="contact-email" href="mailto:info@azresearchsociety.org">info@azresearchsociety.org</a>
+          </div>
+
+          <form class="contact-form reveal" id="ars-contact-form" action="https://formspree.io/f/xljdgezl" method="POST">
+            <input type="hidden" name="_subject" value="New ARS website submission" />
+            <input type="hidden" name="source" value="azresearchsociety.org" />
+            <div class="form-honeypot" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
+
+            <div class="form-grid">
+              <label class="form-field"><span data-i18n="formName">Ad və soyad</span><input type="text" name="name" autocomplete="name" required /></label>
+              <label class="form-field"><span data-i18n="formEmail">E-poçt ünvanı</span><input type="email" name="email" autocomplete="email" required /></label>
+              <label class="form-field"><span data-i18n="formOrganization">Universitet və ya təşkilat</span><input type="text" name="organization" autocomplete="organization" /></label>
+              <label class="form-field"><span data-i18n="formCountry">Ölkə</span><input type="text" name="country" autocomplete="country-name" /></label>
+              <label class="form-field form-field-wide"><span data-i18n="formTopic">Müraciətin mövzusu</span>
+                <select name="topic" id="contact-topic" required>
+                  <option value="" data-i18n="formChooseTopic">Mövzu seçin</option>
+                  <option value="membership" data-i18n="topicMembership">Üzvlük</option>
+                  <option value="workshop" data-i18n="topicWorkshop">Təlim və tədbirlər</option>
+                  <option value="partnership" data-i18n="topicPartnership">Tərəfdaşlıq</option>
+                  <option value="speaker" data-i18n="topicSpeaker">Spiker təklifi</option>
+                  <option value="advisory-board" data-i18n="topicAdvisory">Elmi Məsləhət Şurası</option>
+                  <option value="general" data-i18n="topicGeneral">Ümumi müraciət</option>
+                  <option value="other" data-i18n="topicOther">Digər</option>
+                </select>
+              </label>
+              <label class="form-field form-field-wide"><span data-i18n="formMessage">Mesaj</span><textarea name="message" rows="6" minlength="20" maxlength="3000" required></textarea></label>
+            </div>
+
+            <label class="form-consent"><input type="checkbox" name="consent" value="yes" required /><span data-i18n="formConsent">Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.</span></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit"><span data-i18n="formSubmit">Mesajı göndər</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </section>
     </main>
