@@ -1,10 +1,10 @@
 # Azerbaijan Research Society website
 
-A responsive bilingual (Azerbaijani/English) website for the Azerbaijan Research Society. The temporary public address is:
+A responsive bilingual (Azerbaijani/English) website for the Azerbaijan Research Society. The primary public address is:
 
-`https://masudbabaev.github.io/ars-website/`
+`https://azresearchsociety.org/`
 
-The planned custom domain is `azresearchsociety.org`, but it should only be connected after the domain is purchased.
+The domain is connected through GitHub Pages, with `https://masudbabaev.github.io/ars-website/` retained as the underlying project address.
 
 ## Preview locally
 
@@ -31,18 +31,18 @@ The website includes the society's mission, community model, research department
 2. Do not upload the ZIP file and do not create another nested `ars-website` folder.
 3. In **Settings → Pages**, choose **Deploy from a branch**.
 4. Select the `main` branch and `/ (root)`, then click **Save**.
-5. Wait a few minutes and open `https://masudbabaev.github.io/ars-website/`.
+5. Wait for the Pages deployment to finish, then open `https://azresearchsociety.org/`.
 
-The current metadata, `robots.txt`, and `sitemap.xml` are configured for the temporary GitHub Pages address. There is intentionally no `CNAME` file yet.
+The metadata, `CNAME`, `robots.txt`, and `sitemap.xml` are configured for `azresearchsociety.org`.
 
 ## Connecting the custom domain later
 
-After purchasing `azresearchsociety.org`:
+The site is prepared for `azresearchsociety.org`. To connect it:
 
 1. Open **Settings → Pages** and enter the domain under **Custom domain**.
 2. Follow GitHub's displayed DNS instructions at the domain registrar.
-3. Confirm that GitHub creates a `CNAME` file containing `azresearchsociety.org`.
-4. Replace the temporary GitHub Pages URLs in `index.html`, `robots.txt`, and `sitemap.xml` with `https://azresearchsociety.org/`.
+3. Confirm that the repository root contains a `CNAME` file with `azresearchsociety.org`.
+4. At the DNS provider, point the apex domain to GitHub Pages and point `www` to `masudbabaev.github.io`.
 5. Enable **Enforce HTTPS** after the certificate becomes available.
 
 Before public launch, connect the membership button to the final application form if email applications will not be used.

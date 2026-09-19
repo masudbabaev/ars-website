@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://masudbabaev.github.io/ars-website/sitemap.xml
+Sitemap: https://azresearchsociety.org/sitemap.xml
