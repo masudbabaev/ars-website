@@ -616,39 +616,3 @@ if (yearElement) yearElement.textContent = new Date().getFullYear();
 let savedLanguage = "az";
 try { savedLanguage = localStorage.getItem("ars-language") || "az"; } catch (error) { /* Use Azerbaijani by default. */ }
 setLanguage(translations[savedLanguage] ? savedLanguage : "az");
-
-document.addEventListener("DOMContentLoaded", function() {
-    const preloader = document.getElementById("preloader");
-    const progressBar = document.getElementById("progress-bar");
-    const progressText = document.getElementById("progress-text");
-
-    if (!preloader) return;
-
-   
-    document.body.classList.add("loading");
-
-    let progress = 0;
-    
-    
-    let interval = setInterval(function() {
-        progress += Math.floor(Math.random() * 6) + 2; 
-        
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            finishLoading();
-        }
-        
-        progressBar.style.width = progress + "%";
-        progressText.innerText = progress + "%";
-        
-    }, 45); 
-
-    function finishLoading() {
-        setTimeout(() => {
-            preloader.style.opacity = "0"; 
-            preloader.style.visibility = "hidden"; 
-            document.body.classList.remove("loading"); 
-        }, 400); 
-    }
-});
