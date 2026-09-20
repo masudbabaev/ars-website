@@ -23,7 +23,7 @@ Then open `http://localhost:8080`.
 - `script.js` — language switcher, mobile navigation, and reveal effects
 - `assets/` — ARS logo, optimized board portraits, department visualizations, and source template
 
-The website includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a broader People section with separate Executive Board and Scientific Advisory Board subsections. All nine people have interactive bilingual profiles with academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
+The website includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a broader People section with separate Executive Board and Scientific Advisory Board subsections. All eleven people have interactive bilingual profiles with academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
 
 ## Contact form
 
