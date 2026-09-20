@@ -26,7 +26,7 @@ Then open `http://localhost:8080`.
 - `script.js` — language switcher, mobile navigation, and reveal effects
 - `assets/` — ARS logo, optimized board portraits, department visualizations, and source template
 
-The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. All eleven people have interactive bilingual profiles with academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
+The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. Both board pages use interactive hierarchical visualizations; Amil Aligayev is identified as Head of the Scientific Advisory Board. All eleven people have interactive bilingual profiles, compact primary-affiliation marks, and academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
 
 ## Contact form
 
