@@ -21,15 +21,95 @@
     <script src="script.js?v=20" defer></script>
   </head>
   <body data-page="home">
-    <div id="preloader">
-        <div class="preloader-content">
-            <img src="ars-logo.png" alt="ARS Logo" class="preloader-logo">
+    <!-- PRELOADER BAŞLANĞICI (Kəskin həll) -->
+    <style>
+      #ars-preloader {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: #ffffff !important;
+        z-index: 9999999 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transition: opacity 0.5s ease, visibility 0.5s ease !important;
+      }
+      .preloader-logo {
+        width: 180px;
+        animation: ars-pulse 1s infinite alternate;
+        margin-bottom: 50px;
+      }
+      .progress-container {
+        width: 220px;
+        text-align: center;
+      }
+      .progress-bar-bg {
+        width: 100%;
+        height: 4px;
+        background-color: #e2e8f0;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
+      .progress-bar-fill {
+        width: 0%;
+        height: 100%;
+        background-color: #071f4a;
+        transition: width 0.1s linear;
+      }
+      .progress-text {
+        font-family: sans-serif;
+        font-size: 15px;
+        color: #071f4a;
+        font-weight: 800;
+      }
+      @keyframes ars-pulse {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.08); }
+      }
+      body.ars-loading {
+        overflow: hidden !important;
+      }
+    </style>
+
+    <div id="ars-preloader">
+      <img src="ars-logo.png" alt="ARS Logo" class="preloader-logo">
+      <div class="progress-container">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="ars-progress-fill"></div>
         </div>
-        <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="progress-text" id="progress-text">0%</div>
-        </div>
+        <div class="progress-text" id="ars-progress-text">0%</div>
+      </div>
     </div>
+
+    <script>
+      document.body.classList.add("ars-loading");
+      document.addEventListener("DOMContentLoaded", function() {
+        let progress = 0;
+        const fill = document.getElementById("ars-progress-fill");
+        const text = document.getElementById("ars-progress-text");
+        const preloader = document.getElementById("ars-preloader");
+
+        // Tam 1.5 saniyede (hızlıca) dolması için ayarlandı
+        let interval = setInterval(function() {
+          progress += Math.floor(Math.random() * 8) + 4; 
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            setTimeout(() => {
+              preloader.style.opacity = "0";
+              preloader.style.visibility = "hidden";
+              document.body.classList.remove("ars-loading");
+            }, 200); // 100% olduktan 0.2 saniye sonra ekran açılır
+          }
+          fill.style.width = progress + "%";
+          text.innerText = progress + "%";
+        }, 50);
+      });
+    </script>
     <!-- PRELOADER SONU -->
     <a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a>
 
