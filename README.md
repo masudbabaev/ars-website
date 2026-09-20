@@ -18,12 +18,15 @@ Then open `http://localhost:8080`.
 
 ## Files
 
-- `index.html` — page structure and bilingual content
+- `index.html` — bilingual landing page
+- `about.html`, `programs.html`, `workshop.html`, `departments.html`, and `contact.html` — dedicated content pages
+- `people.html` — People hub with separate board choices
+- `executive-board.html` and `scientific-board.html` — dedicated board directories and interactive profiles
 - `styles.css` — responsive ARS visual system
 - `script.js` — language switcher, mobile navigation, and reveal effects
 - `assets/` — ARS logo, optimized board portraits, department visualizations, and source template
 
-The website includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a broader People section with separate Executive Board and Scientific Advisory Board subsections. All eleven people have interactive bilingual profiles with academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
+The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. All eleven people have interactive bilingual profiles with academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
 
 ## Contact form
 

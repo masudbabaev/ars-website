@@ -7,7 +7,8 @@ const translations = {
     programsLabel: "İcma modeli", programsTitle: "İdeyadan real<br /><em>tədqiqat nəticəsinə.</em>", seminarsTitle: "Tədqiqatçı görüşləri", seminarsText: "Aktiv tədqiqatçılar, onların təcrübəsi və iş istiqamətləri ilə birbaşa tanışlıq.", networkTitle: "Mentor uyğunlaşdırılması", networkText: "Tələbələri maraqlarına uyğun mentor və tədqiqat istiqaməti ilə əlaqələndirmək.", mentorshipTitle: "Aylıq masterklaslar", mentorshipText: "Elmi yazı, məlumatların təhlili, layihə təklifi, qrant və rəy prosesi üzrə praktiki bacarıqlar.", sprintsTitle: "Layihə sprintləri və ortaq laboratoriyalar", sprintsText: "İştirakçıları real tədqiqat problemləri ətrafında birləşdirən nəticə yönümlü əməkdaşlıq.", outputsTitle: "Nəticələrin təqdimatı", outputsText: "Öyrənməni məqalə, poster, məlumat dəsti və təqdimat kimi konkret akademik nəticələrə çevirmək.", learnMore: "Ətraflı", journeyTitle: "Uzunmüddətli hədəf", journeyCommunity: "Tədqiqat icması", journeySociety: "Tədqiqat cəmiyyəti", journeyNetwork: "Tədqiqat şəbəkəsi", journeyCenter: "Müstəqil tədqiqat mərkəzi",
     workshopLabel: "Yeni tədqiqatçılar üçün emalatxana", workshopBadge: "Pulsuz · Onlayn · 3 həftə", workshopTitle: "Tədqiqat ideyasından<br /><em>nəşrə doğru.</em>", workshopSummary: "Erkən karyera mərhələsində olan tədqiqatçılar üçün üç masterklas, praktiki tapşırıqlar və həftəlik inkişaf yolu.", weekOne: "1-ci həftə", weekTwo: "2-ci həftə", weekThree: "3-cü həftə", methodsTitle: "Tədqiqat metodları", methodsText: "Tədqiqat sualı, uyğun metodologiyanın seçilməsi və etibarlı tədqiqat planının qurulması.", ethicsTitle: "Tədqiqat etikası", ethicsText: "Akademik dürüstlük, məlumatlı razılıq, müəlliflik və məsuliyyətli tədqiqat təcrübəsi.", publishingTitle: "Məqalənin jurnala təqdim edilməsi", publishingText: "Uyğun jurnalın seçilməsi, təqdimat sənədləri və rəy prosesinə hazırlıq.", formatTitle: "Format", formatText: "Təqdimatçının imkanından asılı olaraq Azərbaycan və ya ingilis dilində", tasksTitle: "Həftəlik tapşırıqlar", tasksText: "Hər tapşırıq növbəti mövzu başlamazdan əvvəl tamamlanır", workshopCta: "Marağını bildir",
     departmentsLabel: "Elmi şöbələr", departmentsTitle: "Fərqli sahələr.<br /><em>Ortaq suallar.</em>", engineeringTitle: "Mühəndislik və tətbiqi texnologiyalar", engineeringText: "Enerji, mexanika, materiallar və sənaye texnologiyaları üzrə əməkdaşlıq.", lifeTitle: "Təbiət və həyat elmləri", lifeText: "Biologiya, kimya, neyroelm və ətraf mühit üzrə fənlərarası araşdırmalar.", dataTitle: "Data, süni intellekt və riyazi elmlər", dataText: "Məlumatların təhlili, modelləşdirmə, süni intellekt və hesablama metodları.", socialTitle: "Sosial və humanitar elmlər", socialText: "Dilçilik, təhsil, cəmiyyət və mədəniyyət üzrə tədqiqat və dialoq.", departmentNote: "Üzvlər maraq və təcrübələrinə uyğun olaraq maksimum iki şöbədə iştirak edə bilərlər.",
-    teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", advisoryLabel: "Elmi Məsləhət Şurası", advisoryTitle: "Təcrübəni elmi istiqamətə<br /><em>çevirən mütəxəssislər.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", roleAdvisory: "Elmi Məsləhət Şurasının üzvü", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Hesablama materialşünaslığı · Süni intellekt", azizehProfile: "Sabancı Universiteti · SUNUM<br />Ağıllı örtüklər · Biomateriallar", sabrinProfile: "Stomatologiya Kolleci · Abu Dabi<br />Tibb təhsili · Rəqəmsal səhiyyə", ulkarProfile: "Fizika İnstitutu · ADDA<br />Fotokataliz · Kondensə olunmuş maddə fizikası", nijatProfile: "ECOHUB · Sakarya Universiteti<br />Analitik kimya · Davamlı materiallar", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Əlaqə, elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", email: "E-poçt", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
+    teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", advisoryLabel: "Elmi Məsləhət Şurası", advisoryTitle: "Təcrübəni elmi istiqamətə<br /><em>çevirən mütəxəssislər.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", roleAdvisory: "Elmi Məsləhət Şurasının üzvü", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Hesablama materialşünaslığı · Süni intellekt", azizehProfile: "Sabancı Universiteti · SUNUM<br />Ağıllı örtüklər · Biomateriallar", sabrinProfile: "Al Ain Universiteti · Abu Dabi<br />Tibb təhsili · Rəqəmsal səhiyyə", ulkarProfile: "Fizika İnstitutu · ADDA<br />Fotokataliz · Kondensə olunmuş maddə fizikası", nijatProfile: "ECOHUB · Sakarya Universiteti<br />Analitik kimya · Davamlı materiallar", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Əlaqə, elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", email: "E-poçt", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
+    peopleEyebrow: "ARS insanları", peoplePageTitle: "Cəmiyyətimizi formalaşdıran<br /><em>insanlarla tanış olun.</em>", peoplePageText: "İcra Şurası cəmiyyətin gündəlik istiqamətini və proqramlarını idarə edir. Elmi Məsləhət Şurası isə akademik keyfiyyət, tədqiqat prioritetləri və uzunmüddətli inkişaf üzrə məsləhət verir.", executiveChoiceTitle: "İcra Şurası", executiveChoiceText: "ARS-in strategiyasını, proqramlarını, kommunikasiyasını və icma fəaliyyətini idarə edən komanda.", advisoryChoiceTitle: "Elmi Məsləhət Şurası", advisoryChoiceText: "Cəmiyyətin elmi istiqamətini gücləndirən və müxtəlif sahələr üzrə təcrübə təqdim edən tədqiqatçılar.", exploreBoard: "Şuraya bax", backToPeople: "İnsanlar bölməsinə qayıt", executivePageText: "Cəmiyyətin missiyasını gündəlik fəaliyyətə çevirən və proqramların həyata keçirilməsinə rəhbərlik edən komanda.", advisoryPageText: "ARS-in elmi keyfiyyətini, fənlərarası istiqamətini və tədqiqat əlaqələrini dəstəkləyən mütəxəssislər.",
     communityKicker: "Elmin gələcəyində sənin də yerin var", communityTitle: "Maraq göstər.<br />Əlaqə qur.<br /><em>Təsir yarat.</em>", communityText: "Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.", becomeMember: "Üzv olmaq üçün yaz",
     contactLabel: "Əlaqə", contactTitle: "Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em>", contactIntro: "Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.", formName: "Ad və soyad", formEmail: "E-poçt ünvanı", formOrganization: "Universitet və ya təşkilat", formCountry: "Ölkə", formTopic: "Müraciətin mövzusu", formChooseTopic: "Mövzu seçin", topicMembership: "Üzvlük", topicWorkshop: "Təlim və tədbirlər", topicPartnership: "Tərəfdaşlıq", topicSpeaker: "Spiker təklifi", topicAdvisory: "Elmi Məsləhət Şurası", topicGeneral: "Ümumi müraciət", topicOther: "Digər", formMessage: "Mesaj", formConsent: "Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.", formSubmit: "Mesajı göndər", formSending: "Göndərilir…", formSuccess: "Təşəkkür edirik. Mesajınız ARS komandasına göndərildi.", formError: "Mesaj göndərilmədi. Bir qədər sonra yenidən cəhd edin və ya bizə e-poçt göndərin.",
     footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
@@ -20,7 +21,8 @@ const translations = {
     programsLabel: "Community model", programsTitle: "From an idea to a real<br /><em>research outcome.</em>", seminarsTitle: "Researcher meetups", seminarsText: "Direct exposure to active researchers, their experience, and areas of work.", networkTitle: "Mentor matching", networkText: "Connecting students with mentors and research directions that fit their interests.", mentorshipTitle: "Monthly masterclasses", mentorshipText: "Practical skills in academic writing, data analysis, proposals, grants, and peer review.", sprintsTitle: "Project sprints & shared labs", sprintsText: "Result-oriented collaboration bringing participants together around real research problems.", outputsTitle: "Presenting results", outputsText: "Turning learning into papers, posters, datasets, presentations, and other concrete academic outputs.", learnMore: "Learn more", journeyTitle: "Long-term goal", journeyCommunity: "Research community", journeySociety: "Research society", journeyNetwork: "Research network", journeyCenter: "Independent research center",
     workshopLabel: "Early Researcher Workshop", workshopBadge: "Free · Online · 3 weeks", workshopTitle: "From a research idea<br /><em>to publication.</em>", workshopSummary: "Three masterclasses, practical assignments, and a structured weekly journey for early-career researchers.", weekOne: "Week 1", weekTwo: "Week 2", weekThree: "Week 3", methodsTitle: "Research Methods", methodsText: "Developing a research question, selecting an appropriate methodology, and building a sound research plan.", ethicsTitle: "Research Ethics", ethicsText: "Academic integrity, informed consent, authorship, and responsible research practice.", publishingTitle: "How to Submit a Paper", publishingText: "Choosing a suitable journal, preparing submission materials, and navigating peer review.", formatTitle: "Format", formatText: "Delivered in Azerbaijani or English depending on the presenter and material availability", tasksTitle: "Weekly assignments", tasksText: "Each assignment is completed before the following week's topic begins", workshopCta: "Register interest",
     departmentsLabel: "Research departments", departmentsTitle: "Different fields.<br /><em>Shared questions.</em>", engineeringTitle: "Engineering & applied technology", engineeringText: "Collaboration across energy, mechanics, materials, and industrial technologies.", lifeTitle: "Natural & life sciences", lifeText: "Interdisciplinary work in biology, chemistry, neuroscience, and the environment.", dataTitle: "Data, AI & mathematical sciences", dataText: "Data analysis, modelling, artificial intelligence, and computational methods.", socialTitle: "Social sciences & humanities", socialText: "Research and dialogue across linguistics, education, society, and culture.", departmentNote: "Members may participate in up to two departments based on their interests and experience.",
-    teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", advisoryLabel: "Scientific Advisory Board", advisoryTitle: "Experts turning experience into<br /><em>scientific direction.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", roleAdvisory: "Scientific Advisory Board member", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Computational materials science · AI", azizehProfile: "Sabancı University · SUNUM<br />Smart coatings · Biomaterials", sabrinProfile: "College of Dentistry · Abu Dhabi<br />Medical education · Digital health", ulkarProfile: "Institute of Physics · ASMA<br />Photocatalysis · Condensed-matter physics", nijatProfile: "ECOHUB · Sakarya University<br />Analytical chemistry · Sustainable materials", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Contact, academic & professional profiles", profilePublications: "Selected publications", email: "Email", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
+    teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", advisoryLabel: "Scientific Advisory Board", advisoryTitle: "Experts turning experience into<br /><em>scientific direction.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", roleAdvisory: "Scientific Advisory Board member", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Computational materials science · AI", azizehProfile: "Sabancı University · SUNUM<br />Smart coatings · Biomaterials", sabrinProfile: "Al Ain University · Abu Dhabi<br />Medical education · Digital health", ulkarProfile: "Institute of Physics · ASMA<br />Photocatalysis · Condensed-matter physics", nijatProfile: "ECOHUB · Sakarya University<br />Analytical chemistry · Sustainable materials", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Contact, academic & professional profiles", profilePublications: "Selected publications", email: "Email", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
+    peopleEyebrow: "People at ARS", peoplePageTitle: "Meet the people shaping<br /><em>our society.</em>", peoplePageText: "The Executive Board leads the society's daily direction and programs. The Scientific Advisory Board advises on academic quality, research priorities, and long-term development.", executiveChoiceTitle: "Executive Board", executiveChoiceText: "The team responsible for ARS strategy, programs, communications, and community operations.", advisoryChoiceTitle: "Scientific Advisory Board", advisoryChoiceText: "Researchers who strengthen the society's scientific direction and contribute expertise across disciplines.", exploreBoard: "Explore the board", backToPeople: "Back to People", executivePageText: "The team turning the society's mission into daily action and leading the delivery of its programs.", advisoryPageText: "Experts supporting ARS's scientific quality, interdisciplinary direction, and research connections.",
     communityKicker: "You have a place in the future of science", communityTitle: "Stay curious.<br />Make connections.<br /><em>Create impact.</em>", communityText: "Whether you are a researcher, student, mentor, or science enthusiast, the ARS community is open to you.", becomeMember: "Write to become a member",
     contactLabel: "Contact", contactTitle: "Have a question or an idea?<br /><em>Write to us.</em>", contactIntro: "Use this form for membership, events, partnerships, and scientific collaboration enquiries.", formName: "Full name", formEmail: "Email address", formOrganization: "University or organization", formCountry: "Country", formTopic: "Reason for contacting", formChooseTopic: "Choose a topic", topicMembership: "Membership", topicWorkshop: "Workshops and events", topicPartnership: "Partnership", topicSpeaker: "Speaker proposal", topicAdvisory: "Scientific Advisory Board", topicGeneral: "General enquiry", topicOther: "Other", formMessage: "Message", formConsent: "I agree that my information may be processed for the purpose of responding to my enquiry.", formSubmit: "Send message", formSending: "Sending…", formSuccess: "Thank you. Your message has been sent to the ARS team.", formError: "Your message could not be sent. Please try again later or email us directly.",
     footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
@@ -79,11 +81,11 @@ const translations = {
     image: "assets/sabrin.webp?v=14",
     bio: {
       az: [
-        "Sabrin Ali Azim tibb üzrə fəlsəfə doktoru, dosent, ağız və üz-çənə cərrahı və tədqiqatçıdır. O, Azərbaycan Tibb Universitetində stomatologiya, ağız və üz-çənə cərrahiyyəsi ixtisası və doktorantura təhsili alıb, hazırda Abu Dabidə Stomatologiya Kollecində fəaliyyət göstərir.",
+        "Sabrin Ali Azim tibb üzrə fəlsəfə doktoru, dosent, ağız və üz-çənə cərrahı və tədqiqatçıdır. O, Azərbaycan Tibb Universitetində stomatologiya, ağız və üz-çənə cərrahiyyəsi ixtisası və doktorantura təhsili alıb, hazırda Abu Dabidə Al Ain Universitetində fəaliyyət göstərir.",
         "Onun işi klinik tibb və stomatologiyanı tibb təhsili, süni intellekt, rəqəmsal transformasiya, keyfiyyət təminatı, akkreditasiya, institusional idarəetmə və səhiyyə siyasəti ilə birləşdirir. BƏƏ universitetlərində tədris, kurikulum və qiymətləndirmə, tədqiqata rəhbərlik və keyfiyyət təminatı sahələrində təcrübəyə malikdir."
       ],
       en: [
-        "Sabrin Ali Azim is an Associate Professor, PhD in medicine, oral and maxillofacial surgeon, and researcher. She completed her dentistry, oral and maxillofacial surgery specialization, and doctoral training at Azerbaijan Medical University and is currently based at a College of Dentistry in Abu Dhabi.",
+        "Sabrin Ali Azim is an Associate Professor, PhD in medicine, oral and maxillofacial surgeon, and researcher. She completed her dentistry, oral and maxillofacial surgery specialization, and doctoral training at Azerbaijan Medical University and is currently based at Al Ain University in Abu Dhabi.",
         "Her interdisciplinary work connects clinical medicine and dentistry with medical education, artificial intelligence, digital transformation, quality assurance, accreditation, institutional governance, and health policy. She has experience in university teaching, curriculum and assessment, research supervision, and quality assurance in the UAE."
       ]
     },
@@ -268,16 +270,16 @@ const profiles = {
     ]
   },
   nargiz: {
-    name: "Nərgiz İsmailli",
+    name: "Nargiz Ismayilli",
     roleKey: "roleProject",
     image: "assets/nargiz.webp?v=10",
     bio: {
       az: [
-        "Nərgiz İsmailli Xəzər Universitetində Kimya və biologiya müəllimliyi üzrə təhsil alıb. Westlake Summer School çərçivəsində Çində neyroelm və neyrotexnologiya laboratoriyasında qonaq tələbə kimi tədqiqat mühitini müşahidə edib, həmçinin genetika və biokimya laboratoriyalarında praktiki təcrübə qazanıb.",
+        "Nargiz Ismayilli Xəzər Universitetində Kimya və biologiya müəllimliyi üzrə təhsil alıb. Westlake Summer School çərçivəsində Çində neyroelm və neyrotexnologiya laboratoriyasında qonaq tələbə kimi tədqiqat mühitini müşahidə edib, həmçinin genetika və biokimya laboratoriyalarında praktiki təcrübə qazanıb.",
         "O, Women in Tech Central Asia & Caucasus proqramının Aspiring Teen kateqoriyasında finalist olub, Qazaxıstanda Azərbaycanı təmsil edib və Dubayda Youth Dialogue Forum-a seçilən azərbaycanlı iştirakçı olub. İki dəfə Technest təqaüdü qazanıb və One Health konfransında ekoloji çirklənmənin beyin sağlamlığına təsiri barədə elmi abstrakt təqdim edib."
       ],
       en: [
-        "Nərgiz İsmailli studied Chemistry and Biology Education at Khazar University. Through Westlake Summer School in China, she observed research in a neuroscience and neurotechnology laboratory as a visiting student and gained practical experience in genetics and biochemistry laboratories.",
+        "Nargiz Ismayilli studied Chemistry and Biology Education at Khazar University. Through Westlake Summer School in China, she observed research in a neuroscience and neurotechnology laboratory as a visiting student and gained practical experience in genetics and biochemistry laboratories.",
         "She was a finalist in the Women in Tech Central Asia & Caucasus Aspiring Teen category, represented Azerbaijan in Kazakhstan, and was selected as an Azerbaijani participant in the Youth Dialogue Forum in Dubai. She has twice received a Technest scholarship and presented a scientific abstract on environmental pollution and brain health at a One Health conference."
       ]
     },
@@ -316,8 +318,28 @@ const profiles = {
 };
 
 const titleByLanguage = {
-  az: "Azərbaycan Tədqiqat Cəmiyyəti | ARS",
-  en: "Azerbaijan Research Society | ARS"
+  az: {
+    home: "Azərbaycan Tədqiqat Cəmiyyəti | ARS",
+    about: "Haqqımızda | Azərbaycan Tədqiqat Cəmiyyəti",
+    programs: "Proqramlar | Azərbaycan Tədqiqat Cəmiyyəti",
+    workshop: "Emalatxana | Azərbaycan Tədqiqat Cəmiyyəti",
+    departments: "Elmi şöbələr | Azərbaycan Tədqiqat Cəmiyyəti",
+    people: "İnsanlar | Azərbaycan Tədqiqat Cəmiyyəti",
+    executive: "İcra Şurası | Azərbaycan Tədqiqat Cəmiyyəti",
+    advisory: "Elmi Məsləhət Şurası | Azərbaycan Tədqiqat Cəmiyyəti",
+    contact: "Əlaqə | Azərbaycan Tədqiqat Cəmiyyəti"
+  },
+  en: {
+    home: "Azerbaijan Research Society | ARS",
+    about: "About | Azerbaijan Research Society",
+    programs: "Programs | Azerbaijan Research Society",
+    workshop: "Workshop | Azerbaijan Research Society",
+    departments: "Research Departments | Azerbaijan Research Society",
+    people: "People | Azerbaijan Research Society",
+    executive: "Executive Board | Azerbaijan Research Society",
+    advisory: "Scientific Advisory Board | Azerbaijan Research Society",
+    contact: "Contact | Azerbaijan Research Society"
+  }
 };
 
 const profileDialog = document.getElementById("profile-dialog");
@@ -334,7 +356,8 @@ let currentProfile = null;
 function setLanguage(language) {
   const dictionary = translations[language];
   document.documentElement.lang = language;
-  document.title = titleByLanguage[language];
+  const page = document.body.dataset.page || "home";
+  document.title = titleByLanguage[language][page] || titleByLanguage[language].home;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
     if (dictionary[key]) element.textContent = dictionary[key];
@@ -352,10 +375,10 @@ function setLanguage(language) {
     button.classList.toggle("active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
-  document.querySelector('meta[name="description"]').setAttribute("content", dictionary.metaDescription);
-  document.querySelector('meta[property="og:description"]').setAttribute("content", dictionary.metaDescription);
-  menuButton.setAttribute("aria-label", navigation.classList.contains("open") ? dictionary.menuClose : dictionary.menuOpen);
-  if (currentProfile && profileDialog.open) renderProfile(currentProfile);
+  document.querySelector('meta[name="description"]')?.setAttribute("content", dictionary.metaDescription);
+  document.querySelector('meta[property="og:description"]')?.setAttribute("content", dictionary.metaDescription);
+  if (menuButton && navigation) menuButton.setAttribute("aria-label", navigation.classList.contains("open") ? dictionary.menuClose : dictionary.menuOpen);
+  if (currentProfile && profileDialog?.open) renderProfile(currentProfile);
   updateContactFormLanguage();
   try { localStorage.setItem("ars-language", language); } catch (error) { /* Storage may be unavailable in private browsing. */ }
 }
@@ -379,7 +402,7 @@ function makeProfileLink(item, dictionary) {
 
 function renderProfile(profileId) {
   const data = profiles[profileId];
-  if (!data) return;
+  if (!data || !profileDialog) return;
   const language = document.documentElement.lang in translations ? document.documentElement.lang : "az";
   const dictionary = translations[language];
 
@@ -414,6 +437,7 @@ function renderProfile(profileId) {
 }
 
 function openProfile(profileId) {
+  if (!profileDialog) return;
   currentProfile = profileId;
   renderProfile(profileId);
   if (!profileDialog.open) profileDialog.showModal();
@@ -423,22 +447,22 @@ document.querySelectorAll(".person-card[data-profile]").forEach((card) => {
   card.addEventListener("click", () => openProfile(card.dataset.profile));
 });
 
-document.querySelector(".profile-close").addEventListener("click", () => profileDialog.close());
-profileDialog.addEventListener("click", (event) => {
+document.querySelector(".profile-close")?.addEventListener("click", () => profileDialog.close());
+profileDialog?.addEventListener("click", (event) => {
   if (event.target === profileDialog) profileDialog.close();
 });
-profileDialog.addEventListener("close", () => { currentProfile = null; });
+profileDialog?.addEventListener("close", () => { currentProfile = null; });
 
 document.querySelectorAll(".lang-button").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
 
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
-menuButton.addEventListener("click", () => {
+menuButton?.addEventListener("click", () => {
   const open = navigation.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", translations[document.documentElement.lang][open ? "menuClose" : "menuOpen"]);
 });
-navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
   navigation.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");
 }));
@@ -446,10 +470,18 @@ navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click"
 const contactForm = document.getElementById("ars-contact-form");
 const contactTopic = document.getElementById("contact-topic");
 const contactStatus = document.getElementById("form-status");
-const contactSubmitButton = contactForm.querySelector('button[type="submit"]');
-const contactSubmitLabel = contactSubmitButton.querySelector("span");
+const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
+const contactSubmitLabel = contactSubmitButton?.querySelector("span");
+
+if (contactTopic) {
+  const requestedTopic = new URLSearchParams(window.location.search).get("topic");
+  if (requestedTopic && [...contactTopic.options].some((option) => option.value === requestedTopic)) {
+    contactTopic.value = requestedTopic;
+  }
+}
 
 function updateContactFormLanguage() {
+  if (!contactForm || !contactSubmitButton || !contactSubmitLabel || !contactStatus) return;
   const language = document.documentElement.lang in translations ? document.documentElement.lang : "az";
   const dictionary = translations[language];
   contactSubmitLabel.textContent = contactSubmitButton.disabled ? dictionary.formSending : dictionary.formSubmit;
@@ -458,6 +490,7 @@ function updateContactFormLanguage() {
 }
 
 function setContactStatus(state) {
+  if (!contactStatus) return;
   contactStatus.dataset.state = state;
   contactStatus.className = `form-status${state ? ` ${state}` : ""}`;
   contactStatus.textContent = "";
@@ -466,16 +499,17 @@ function setContactStatus(state) {
 
 document.querySelectorAll("[data-form-topic]").forEach((link) => {
   link.addEventListener("click", () => {
+    if (!contactTopic) return;
     contactTopic.value = link.dataset.formTopic;
     setContactStatus("");
   });
 });
 
-contactForm.addEventListener("input", () => {
+contactForm?.addEventListener("input", () => {
   if (contactStatus.dataset.state) setContactStatus("");
 });
 
-contactForm.addEventListener("submit", async (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   contactSubmitButton.disabled = true;
   setContactStatus("");
@@ -505,7 +539,7 @@ contactForm.addEventListener("submit", async (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && navigation.classList.contains("open")) {
+  if (event.key === "Escape" && navigation?.classList.contains("open")) {
     navigation.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
     menuButton.setAttribute("aria-label", translations[document.documentElement.lang].menuOpen);
@@ -527,7 +561,8 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 let savedLanguage = "az";
 try { savedLanguage = localStorage.getItem("ars-language") || "az"; } catch (error) { /* Use Azerbaijani by default. */ }
 setLanguage(translations[savedLanguage] ? savedLanguage : "az");
