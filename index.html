@@ -11,77 +11,22 @@
     <meta property="og:title" content="Azerbaijan Research Society | ARS" />
     <meta property="og:description" content="Connecting Azerbaijani researchers, students, and science enthusiasts around the world." />
     <meta property="og:url" content="https://azresearchsociety.org/" />
-    <meta property="og:image" content="https://azresearchsociety.org/assets/ars-logo.png?v=10" />
+    <meta property="og:image" content="https://azresearchsociety.org/assets/ars-logo.png?v=20" />
     <meta property="og:image:alt" content="Azerbaijan Research Society logo" />
     <meta name="twitter:card" content="summary" />
     <title>Azərbaycan Tədqiqat Cəmiyyəti | ARS</title>
-    <link rel="icon" href="assets/ars-logo.png?v=10" />
-    <link rel="preload" as="image" href="assets/ars-logo.png?v=10" />
+    <link rel="icon" href="assets/ars-logo.png?v=20" />
+    <link rel="preload" as="image" href="assets/ars-logo.png?v=20" />
     <link rel="stylesheet" href="styles.css?v=20" />
     <script src="script.js?v=20" defer></script>
   </head>
   <body data-page="home">
-    <div id="ars-preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #ffffff; z-index: 9999999; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.5s ease;">
-      <img src="ars-logo.png" alt="ARS Logo" style="width: 180px; margin-bottom: 50px; animation: ars-pulse 1.2s infinite alternate;">
-      <div style="width: 220px; text-align: center;">
-        <div style="width: 100%; height: 4px; background-color: #e2e8f0; border-radius: 2px; overflow: hidden; margin-bottom: 8px;">
-          <div id="ars-progress-fill" style="width: 0%; height: 100%; background-color: #071f4a; transition: width 0.1s linear;"></div>
-        </div>
-        <div id="ars-progress-text" style="font-family: sans-serif; font-size: 15px; color: #071f4a; font-weight: 800;">0%</div>
-      </div>
-    </div>
-
-    <style>
-      @keyframes ars-pulse {
-        0% { transform: scale(1); }
-        100% { transform: scale(1.08); }
-      }
-      body.ars-loading {
-        overflow: hidden !important;
-      }
-    </style>
-
-    <script>
-      document.body.classList.add("ars-loading");
-      document.addEventListener("DOMContentLoaded", function() {
-        let progress = 0;
-        const fill = document.getElementById("ars-progress-fill");
-        const text = document.getElementById("ars-progress-text");
-        const preloader = document.getElementById("ars-preloader");
-
-
-        let interval = setInterval(function() {
-          progress += Math.floor(Math.random() * 8) + 4; 
-          
-          if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            
-
-            setTimeout(() => {
-              preloader.style.opacity = "0"; 
-              
-
-              setTimeout(() => {
-                preloader.style.display = "none"; 
-                document.body.classList.remove("ars-loading");
-              }, 500); 
-              
-            }, 300); 
-          }
-          
-          fill.style.width = progress + "%";
-          text.innerText = progress + "%";
-        }, 45);
-      });
-    </script>
-
     <a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a>
 
     <header class="site-header" id="top">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Azerbaijan Research Society home">
-          <img src="assets/ars-logo.png?v=10" alt="ARS — Azerbaijan Research Society" width="664" height="700" fetchpriority="high" />
+          <img src="assets/ars-logo.png?v=20" alt="ARS — Azerbaijan Research Society" width="662" height="700" fetchpriority="high" />
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menyunu aç">
@@ -174,6 +119,12 @@
             <div class="section-label light"><span>02</span><p data-i18n="programsLabel">Proqramlarımız</p></div>
             <h2 data-i18n-html="programsTitle">Bilik görüşəndə<br /><em>imkan yaranır.</em></h2>
           </div>
+          <nav class="program-overview reveal" data-i18n-aria-label="programOverviewLabel">
+            <a href="programs.html#connect"><span>01</span><strong data-i18n="phaseConnect">Əlaqə qur</strong></a>
+            <a href="programs.html#develop"><span>02</span><strong data-i18n="phaseDevelop">Bacarıq qazan</strong></a>
+            <a href="programs.html#collaborate"><span>03</span><strong data-i18n="phaseCollaborate">Birgə tədqiq et</strong></a>
+            <a href="programs.html#publish"><span>04</span><strong data-i18n="phasePublish">Nəticəni paylaş</strong></a>
+          </nav>
           <div class="program-grid community-model">
             <article class="program-card reveal">
               <span class="program-index">01</span>
@@ -407,7 +358,7 @@
     <footer class="site-footer" id="contact">
       <div class="container footer-top">
         <div class="footer-brand">
-          <img src="assets/ars-logo.png?v=10" alt="ARS" width="664" height="700" loading="lazy" decoding="async" />
+          <img src="assets/ars-logo.png?v=20" alt="ARS" width="662" height="700" loading="lazy" decoding="async" />
           <p data-i18n="footerTagline">Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.</p>
         </div>
         <div class="footer-links">

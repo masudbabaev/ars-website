@@ -19,14 +19,15 @@ Then open `http://localhost:8080`.
 ## Files
 
 - `index.html` — bilingual landing page
-- `about.html`, `programs.html`, `workshop.html`, `departments.html`, and `contact.html` — dedicated content pages
+- `programs.html` — interactive four-stage research pathway
+- `about.html`, `workshop.html`, `departments.html`, and `contact.html` — dedicated content pages
 - `people.html` — People hub with separate board choices
 - `executive-board.html` and `scientific-board.html` — dedicated board directories and interactive profiles
 - `styles.css` — responsive ARS visual system
-- `script.js` — language switcher, mobile navigation, and reveal effects
-- `assets/` — ARS logo, optimized board portraits, department visualizations, and source template
+- `script.js` — language switcher, accessible program tabs, mobile navigation, profiles, forms, and reveal effects
+- `assets/` — ARS logo, optimized board portraits, and department visualizations
 
-The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, community model, illustrated research departments, three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. Both board pages use interactive hierarchical visualizations; Amil Aligayev is identified as Head of the Scientific Advisory Board. All eleven people have interactive bilingual profiles, compact primary-affiliation marks, and academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
+The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, a four-stage interactive research pathway, illustrated research departments, the three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. Both board pages use interactive hierarchical visualizations; Amil Aligayev is identified as Head of the Scientific Advisory Board. All eleven people have interactive bilingual profiles, compact primary-affiliation marks, and academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
 
 ## Contact form
 
@@ -42,14 +43,11 @@ The form posts to Formspree form ID `xljdgezl`. JavaScript enhances the submissi
 
 The metadata, `CNAME`, `robots.txt`, and `sitemap.xml` are configured for `azresearchsociety.org`.
 
-## Connecting the custom domain later
+## Repository hygiene
 
-The site is prepared for `azresearchsociety.org`. To connect it:
+- Keep the production files listed above directly in the repository root.
+- Do not commit ZIP delivery archives.
+- Do not keep another nested `ars-website/` copy inside the repository.
+- Use only `assets/ars-logo.png`; a second root-level `ars-logo.png` is unnecessary.
 
-1. Open **Settings → Pages** and enter the domain under **Custom domain**.
-2. Follow GitHub's displayed DNS instructions at the domain registrar.
-3. Confirm that the repository root contains a `CNAME` file with `azresearchsociety.org`.
-4. At the DNS provider, point the apex domain to GitHub Pages and point `www` to `masudbabaev.github.io`.
-5. Enable **Enforce HTTPS** after the certificate becomes available.
-
-Before public launch, connect the membership button to the final application form if email applications will not be used.
+The custom domain is already connected through GitHub Pages. Keep `CNAME`, the four GitHub Pages apex A records, the `www` CNAME, and **Enforce HTTPS** enabled.
