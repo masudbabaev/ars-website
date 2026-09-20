@@ -21,7 +21,6 @@
     <script src="script.js?v=20" defer></script>
   </head>
   <body data-page="home">
-    <!-- PRELOADER BAŞLANĞICI (Düzeltilmiş ve Garantili Həll) -->
     <div id="ars-preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #ffffff; z-index: 9999999; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.5s ease;">
       <img src="ars-logo.png" alt="ARS Logo" style="width: 180px; margin-bottom: 50px; animation: ars-pulse 1.2s infinite alternate;">
       <div style="width: 220px; text-align: center;">
@@ -50,7 +49,7 @@
         const text = document.getElementById("ars-progress-text");
         const preloader = document.getElementById("ars-preloader");
 
-        // Yüklenme hızı (yaklaşık 1-1.5 saniye sürecek)
+
         let interval = setInterval(function() {
           progress += Math.floor(Math.random() * 8) + 4; 
           
@@ -58,11 +57,11 @@
             progress = 100;
             clearInterval(interval);
             
-            // 100% olduktan kısa bir süre sonra
+
             setTimeout(() => {
-              preloader.style.opacity = "0"; // Yavaşça şeffaflaşır
+              preloader.style.opacity = "0"; 
               
-              // Şeffaflaşma bittikten sonra sayfadan TAMAMEN silinir (boşluk kalmaz)
+
               setTimeout(() => {
                 preloader.style.display = "none"; 
                 document.body.classList.remove("ars-loading");
@@ -76,7 +75,7 @@
         }, 45);
       });
     </script>
-    <!-- PRELOADER SONU -->
+
     <a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a>
 
     <header class="site-header" id="top">
