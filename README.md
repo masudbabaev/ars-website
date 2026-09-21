@@ -24,10 +24,10 @@ Then open `http://localhost:8080`.
 - `people.html` — People hub with separate board choices
 - `executive-board.html` and `scientific-board.html` — dedicated board directories and interactive profiles
 - `styles.css` — responsive ARS visual system
-- `script.js` — language switcher, accessible program tabs, mobile navigation, profiles, forms, and reveal effects
+- `script.js` — branded page transitions, language switcher, accessible program tabs, mobile navigation, profiles, forms, and reveal effects
 - `assets/` — ARS logo, optimized board portraits, and department visualizations
 
-The website uses a professional multi-page structure while preserving the ARS visual identity. It includes the society's mission, a four-stage interactive research pathway, illustrated research departments, the three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. Both board pages use interactive hierarchical visualizations; Amil Aligayev is identified as Head of the Scientific Advisory Board. All twelve people have interactive bilingual profiles, compact primary-affiliation marks, and academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
+The website uses a professional multi-page structure while preserving the ARS visual identity. It includes a short 0–100% ARS logo-fill transition on first entry and between internal pages, with a reduced-motion fallback. It also includes the society's mission, a four-stage interactive research pathway, illustrated research departments, the three-week Early Researcher Workshop, and a People hub with separate Executive Board and Scientific Advisory Board pages. Both board pages use interactive hierarchical visualizations; Amil Aligayev is identified as Head of the Scientific Advisory Board. All twelve people have interactive bilingual profiles, compact primary-affiliation marks, and academic or professional links where supplied. The site also includes a bilingual contact form connected to Formspree; membership and workshop calls to action preselect the relevant enquiry topic. The public contact address is `info@azresearchsociety.org`. Selected publications include DOI links.
 
 ## Contact form
 

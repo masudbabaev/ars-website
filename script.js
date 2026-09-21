@@ -1,3 +1,130 @@
+document.documentElement.classList.add("js");
+
+const pageLoader = document.getElementById("page-loader") || (() => {
+  const loader = document.createElement("div");
+  loader.className = "page-loader";
+  loader.id = "page-loader";
+  loader.setAttribute("role", "status");
+  loader.setAttribute("aria-live", "polite");
+  loader.setAttribute("aria-label", "ARS website loading");
+  loader.innerHTML = `
+    <div class="loader-inner">
+      <div class="loader-logo" aria-hidden="true">
+        <img class="loader-logo-ghost" src="assets/ars-logo.png?v=22" alt="" width="662" height="700" />
+        <span class="loader-logo-fill"><img src="assets/ars-logo.png?v=22" alt="" width="662" height="700" /></span>
+      </div>
+      <div class="loader-meta"><span>ARS</span><strong><span id="loader-progress">00</span>%</strong></div>
+      <div class="loader-track" aria-hidden="true"><span></span></div>
+      <p class="loader-tagline">PEOPLE · IDEAS · RESEARCH · IMPACT</p>
+    </div>`;
+  document.body.prepend(loader);
+  return loader;
+})();
+const loaderCounter = document.getElementById("loader-progress");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let loaderValue = 0;
+let loaderFrame = 0;
+let loaderFinished = false;
+
+function setLoaderProgress(value) {
+  loaderValue = Math.max(0, Math.min(100, value));
+  pageLoader?.style.setProperty("--loader-progress", `${loaderValue}%`);
+  if (loaderCounter) loaderCounter.textContent = String(Math.round(loaderValue)).padStart(2, "0");
+}
+
+function hidePageLoader() {
+  if (!pageLoader || loaderFinished) return;
+  loaderFinished = true;
+  setLoaderProgress(100);
+  pageLoader.classList.add("is-complete");
+  pageLoader.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("loader-active");
+}
+
+function startEntryLoader() {
+  if (!pageLoader || reducedMotion) {
+    hidePageLoader();
+    return;
+  }
+
+  let transitionStamp = 0;
+  try {
+    transitionStamp = Number(sessionStorage.getItem("ars-page-transition")) || 0;
+    sessionStorage.removeItem("ars-page-transition");
+  } catch (error) { /* Storage may be unavailable in private browsing. */ }
+
+  const continuedTransition = Date.now() - transitionStamp < 3000;
+  const startingValue = continuedTransition ? 42 : 0;
+  const minimumDuration = continuedTransition ? 280 : 720;
+  const completionDuration = continuedTransition ? 180 : 220;
+  const startedAt = performance.now();
+  let loadReady = document.readyState === "complete";
+  let completionStartedAt = 0;
+  let completionFrom = 88;
+
+  setLoaderProgress(startingValue);
+  document.body.classList.add("loader-active");
+  pageLoader.setAttribute("aria-hidden", "false");
+  if (!loadReady) window.addEventListener("load", () => { loadReady = true; }, { once: true });
+
+  function advance(now) {
+    const elapsed = now - startedAt;
+    if (!loadReady || elapsed < minimumDuration) {
+      const phase = Math.min(elapsed / minimumDuration, 1);
+      setLoaderProgress(startingValue + (88 - startingValue) * (1 - Math.pow(1 - phase, 2)));
+      loaderFrame = requestAnimationFrame(advance);
+      return;
+    }
+
+    if (!completionStartedAt) {
+      completionStartedAt = now;
+      completionFrom = loaderValue;
+    }
+    const phase = Math.min((now - completionStartedAt) / completionDuration, 1);
+    setLoaderProgress(completionFrom + (100 - completionFrom) * phase);
+    if (phase < 1) loaderFrame = requestAnimationFrame(advance);
+    else window.setTimeout(hidePageLoader, 90);
+  }
+
+  loaderFrame = requestAnimationFrame(advance);
+  window.setTimeout(hidePageLoader, 4000);
+}
+
+startEntryLoader();
+
+document.addEventListener("click", (event) => {
+  if (reducedMotion || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest("a[href]");
+  if (!link || link.target || link.hasAttribute("download")) return;
+
+  const destination = new URL(link.href, window.location.href);
+  if (!/^https?:$/.test(destination.protocol) || destination.origin !== window.location.origin) return;
+  const sameDocument = destination.pathname === window.location.pathname && destination.search === window.location.search;
+  if (sameDocument && destination.hash) return;
+
+  event.preventDefault();
+  cancelAnimationFrame(loaderFrame);
+  loaderFinished = false;
+  setLoaderProgress(0);
+  pageLoader?.classList.remove("is-complete");
+  pageLoader?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("loader-active");
+  try { sessionStorage.setItem("ars-page-transition", String(Date.now())); } catch (error) { /* Continue without transition memory. */ }
+
+  const transitionStartedAt = performance.now();
+  function leave(now) {
+    const phase = Math.min((now - transitionStartedAt) / 260, 1);
+    setLoaderProgress(42 * phase);
+    if (phase < 1) loaderFrame = requestAnimationFrame(leave);
+    else window.location.assign(destination.href);
+  }
+  loaderFrame = requestAnimationFrame(leave);
+});
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) hidePageLoader();
+});
+
 const translations = {
   az: {
     skip: "Əsas məzmuna keç", navLabel: "Əsas naviqasiya", languageLabel: "Dil seçimi", statsLabel: "Cəmiyyət haqqında göstəricilər", valuesLabel: "Dəyərlərimiz", journeyLabel: "Uzunmüddətli inkişaf yolu", menuOpen: "Menyunu aç", menuClose: "Menyunu bağla", navAbout: "Haqqımızda", navPrograms: "Proqramlar", navWorkshop: "Emalatxana", navDepartments: "Şöbələr", navTeam: "İnsanlar", navCommunity: "İcma", navContact: "Əlaqə",
