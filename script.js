@@ -10,8 +10,8 @@ const pageLoader = document.getElementById("page-loader") || (() => {
   loader.innerHTML = `
     <div class="loader-inner">
       <div class="loader-logo" aria-hidden="true">
-        <img class="loader-logo-ghost" src="assets/ars-logo.png?v=22" alt="" width="662" height="700" />
-        <span class="loader-logo-fill"><img src="assets/ars-logo.png?v=22" alt="" width="662" height="700" /></span>
+        <img class="loader-logo-ghost" src="/assets/ars-logo.png?v=22" alt="" width="662" height="700" />
+        <span class="loader-logo-fill"><img src="/assets/ars-logo.png?v=22" alt="" width="662" height="700" /></span>
       </div>
       <div class="loader-meta"><span>ARS</span><strong><span id="loader-progress">00</span>%</strong></div>
       <div class="loader-track" aria-hidden="true"><span></span></div>
@@ -125,9 +125,105 @@ window.addEventListener("pageshow", (event) => {
   if (event.persisted) hidePageLoader();
 });
 
+const siteProgress = document.createElement("div");
+siteProgress.className = "site-progress";
+siteProgress.setAttribute("aria-hidden", "true");
+siteProgress.innerHTML = "<span></span>";
+document.body.append(siteProgress);
+
+const backToTop = document.createElement("button");
+backToTop.className = "back-to-top";
+backToTop.type = "button";
+backToTop.innerHTML = '<span aria-hidden="true">\u2191</span>';
+document.body.append(backToTop);
+backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" }));
+
+const siteHeader = document.querySelector(".site-header");
+let scrollTicking = false;
+
+function updateScrollInterface() {
+  const scrollable = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  const progress = Math.min(Math.max(window.scrollY / scrollable, 0), 1);
+  siteProgress.style.setProperty("--page-progress", `${progress * 100}%`);
+  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 28);
+  backToTop.classList.toggle("is-visible", window.scrollY > Math.min(620, window.innerHeight * 0.72));
+  scrollTicking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(updateScrollInterface);
+}, { passive: true });
+window.addEventListener("resize", updateScrollInterface, { passive: true });
+updateScrollInterface();
+
+const currentFile = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll(".site-nav a").forEach((link) => {
+  const linkFile = new URL(link.href, window.location.href).pathname.split("/").pop() || "index.html";
+  if (linkFile === currentFile) link.setAttribute("aria-current", "page");
+});
+
+const hero = document.querySelector(".hero");
+if (hero) {
+  const network = document.createElement("div");
+  network.className = "hero-network";
+  network.setAttribute("aria-hidden", "true");
+  network.innerHTML = `
+    <svg viewBox="0 0 620 620" focusable="false">
+      <g class="network-lines"><path d="M90 180 235 95 390 155 525 85M90 180 170 330 325 275 390 155M170 330 295 485 470 415 325 275M470 415 545 260 390 155" /></g>
+      <g class="network-rings"><circle cx="325" cy="275" r="126" /><circle cx="325" cy="275" r="205" /></g>
+    </svg>
+    <i style="--node-x:14%;--node-y:29%;--node-color:var(--blue)"></i>
+    <i style="--node-x:38%;--node-y:15%;--node-color:var(--red)"></i>
+    <i style="--node-x:63%;--node-y:25%;--node-color:var(--green)"></i>
+    <i style="--node-x:85%;--node-y:14%;--node-color:var(--blue)"></i>
+    <i style="--node-x:27%;--node-y:53%;--node-color:var(--green)"></i>
+    <i class="network-core" style="--node-x:52%;--node-y:44%;--node-color:var(--red)"></i>
+    <i style="--node-x:88%;--node-y:42%;--node-color:var(--red)"></i>
+    <i style="--node-x:47%;--node-y:78%;--node-color:var(--blue)"></i>
+    <i style="--node-x:76%;--node-y:67%;--node-color:var(--green)"></i>`;
+  hero.prepend(network);
+
+  if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+    let heroFrame = 0;
+    hero.addEventListener("pointermove", (event) => {
+      cancelAnimationFrame(heroFrame);
+      heroFrame = requestAnimationFrame(() => {
+        const bounds = hero.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        hero.style.setProperty("--hero-shift-x", `${x * 24}px`);
+        hero.style.setProperty("--hero-shift-y", `${y * 18}px`);
+        hero.style.setProperty("--hero-pointer-x", `${(x + 0.5) * 100}%`);
+        hero.style.setProperty("--hero-pointer-y", `${(y + 0.5) * 100}%`);
+      });
+    }, { passive: true });
+    hero.addEventListener("pointerleave", () => {
+      hero.style.setProperty("--hero-shift-x", "0px");
+      hero.style.setProperty("--hero-shift-y", "0px");
+    });
+  }
+}
+
+if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+  document.querySelectorAll(".program-card, .department-card, .person-card, .choice-card, .workshop-week, .purpose-grid article, .program-feature-grid article").forEach((card) => {
+    card.classList.add("has-spotlight");
+    const light = document.createElement("span");
+    light.className = "card-light";
+    light.setAttribute("aria-hidden", "true");
+    card.prepend(light);
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
+      card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
+    }, { passive: true });
+  });
+}
+
 const translations = {
   az: {
-    skip: "Əsas məzmuna keç", navLabel: "Əsas naviqasiya", languageLabel: "Dil seçimi", statsLabel: "Cəmiyyət haqqında göstəricilər", valuesLabel: "Dəyərlərimiz", journeyLabel: "Uzunmüddətli inkişaf yolu", menuOpen: "Menyunu aç", menuClose: "Menyunu bağla", navAbout: "Haqqımızda", navPrograms: "Proqramlar", navWorkshop: "Emalatxana", navDepartments: "Şöbələr", navTeam: "İnsanlar", navCommunity: "İcma", navContact: "Əlaqə",
+    skip: "Əsas məzmuna keç", navLabel: "Əsas naviqasiya", languageLabel: "Dil seçimi", statsLabel: "Cəmiyyət haqqında göstəricilər", valuesLabel: "Dəyərlərimiz", journeyLabel: "Uzunmüddətli inkişaf yolu", menuOpen: "Menyunu aç", menuClose: "Menyunu bağla", backToTop: "Səhifənin əvvəlinə qayıt", navAbout: "Haqqımızda", navPrograms: "Proqramlar", navWorkshop: "Emalatxana", navDepartments: "Şöbələr", navTeam: "İnsanlar", navCommunity: "İcma", navContact: "Əlaqə",
     heroEyebrow: "Elm · Tədqiqat · Əməkdaşlıq", heroTitle: "Azərbaycan elmini<br /><em>birlikdə irəli aparaq.</em>", heroText: "Dünyanın hər yerində çalışan azərbaycanlı tədqiqatçıları, tələbələri və elm həvəskarlarını bir araya gətirən açıq platforma.", joinUs: "İcmaya qoşul", explorePrograms: "Proqramları kəşf et",
     manifestoLabel: "Bizim manifestimiz", people: "İNSANLAR", ideas: "İDEYALAR", research: "TƏDQİQAT", impact: "TƏSİR", manifestoText: "Güclü elmi icma bilik paylaşımı və davamlı əməkdaşlıqla yaranır.", scroll: "Daha çox kəşf et",
     aboutLabel: "Haqqımızda", aboutLead: "Sərhədləri aşan, biliyi paylaşan və <em>Azərbaycan elminin gələcəyini</em> birlikdə quran tədqiqatçılar şəbəkəsiyik.", aboutText1: "Azərbaycan Tədqiqat Cəmiyyəti (ARS) müxtəlif elm sahələrindən olan azərbaycanlı alim və tələbələr arasında əlaqə yaradan qeyri-kommersiya təşəbbüsüdür.", aboutText2: "Məqsədimiz açıq dialoq, mentorluq və multidissiplinar əməkdaşlıq üçün əlçatan mühit formalaşdırmaqdır.", problemLabel: "Problem", problemTitle: "İmkanlara birbaşa çıxış məhduddur", problemText: "Bir çox tələbə aktiv tədqiqatçılara, laboratoriyalara və real layihələrə aparan formal kanallara çıxış tapa bilmir.", purposeLabel: "Məqsədimiz", purposeTitle: "Ortaq sualları real nəticələrə çevirmək", purposeText: "Fərqli sahələrdən insanları bir araya gətirərək əməkdaşlıq, tədqiqat və ölçülə bilən akademik nəticələr yaradırıq.", statApplicants: "İlk mərhələ müraciətçisi", statDepartments: "Elmi şöbə", statPathways: "İcma fəaliyyət istiqaməti", valueBorderless: "Sərhədsizlik", valueOpen: "Açıq icma", valueInterdisciplinary: "Fənlərarası", valueResults: "Nəticə yönümlülük", valueGrowth: "İnkişaf və töhfə",
@@ -138,10 +234,10 @@ const translations = {
     peopleEyebrow: "ARS insanları", peoplePageTitle: "Cəmiyyətimizi formalaşdıran<br /><em>insanlarla tanış olun.</em>", peoplePageText: "İcra Şurası cəmiyyətin gündəlik istiqamətini və proqramlarını idarə edir. Elmi Məsləhət Şurası isə akademik keyfiyyət, tədqiqat prioritetləri və uzunmüddətli inkişaf üzrə məsləhət verir.", executiveChoiceTitle: "İcra Şurası", executiveChoiceText: "ARS-in strategiyasını, proqramlarını, kommunikasiyasını və icma fəaliyyətini idarə edən komanda.", advisoryChoiceTitle: "Elmi Məsləhət Şurası", advisoryChoiceText: "Cəmiyyətin elmi istiqamətini gücləndirən və müxtəlif sahələr üzrə təcrübə təqdim edən tədqiqatçılar.", exploreBoard: "Şuraya bax", backToPeople: "İnsanlar bölməsinə qayıt", executivePageText: "Cəmiyyətin missiyasını gündəlik fəaliyyətə çevirən və proqramların həyata keçirilməsinə rəhbərlik edən komanda.", advisoryPageText: "ARS-in elmi keyfiyyətini, fənlərarası istiqamətini və tədqiqat əlaqələrini dəstəkləyən mütəxəssislər.",
     communityKicker: "Elmin gələcəyində sənin də yerin var", communityTitle: "Maraq göstər.<br />Əlaqə qur.<br /><em>Təsir yarat.</em>", communityText: "Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.", becomeMember: "Üzv olmaq üçün yaz",
     contactLabel: "Əlaqə", contactTitle: "Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em>", contactIntro: "Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.", formName: "Ad və soyad", formEmail: "E-poçt ünvanı", formOrganization: "Universitet və ya təşkilat", formCountry: "Ölkə", formTopic: "Müraciətin mövzusu", formChooseTopic: "Mövzu seçin", topicMembership: "Üzvlük", topicWorkshop: "Təlim və tədbirlər", topicPartnership: "Tərəfdaşlıq", topicSpeaker: "Spiker təklifi", topicAdvisory: "Elmi Məsləhət Şurası", topicGeneral: "Ümumi müraciət", topicOther: "Digər", formMessage: "Mesaj", formConsent: "Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.", formSubmit: "Mesajı göndər", formSending: "Göndərilir…", formSuccess: "Təşəkkür edirik. Mesajınız ARS komandasına göndərildi.", formError: "Mesaj göndərilmədi. Bir qədər sonra yenidən cəhd edin və ya bizə e-poçt göndərin.",
-    footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
+    notFoundTitle: "Səhifə tapılmadı.", notFoundText: "Axtardığınız səhifə köçürülmüş, yenilənmiş və ya mövcud olmaya bilər.", notFoundCta: "Ana səhifəyə qayıt", footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
   },
   en: {
-    skip: "Skip to main content", navLabel: "Primary navigation", languageLabel: "Language selection", statsLabel: "Society highlights", valuesLabel: "Our values", journeyLabel: "Long-term development path", menuOpen: "Open menu", menuClose: "Close menu", navAbout: "About", navPrograms: "Programs", navWorkshop: "Workshop", navDepartments: "Departments", navTeam: "People", navCommunity: "Community", navContact: "Contact",
+    skip: "Skip to main content", navLabel: "Primary navigation", languageLabel: "Language selection", statsLabel: "Society highlights", valuesLabel: "Our values", journeyLabel: "Long-term development path", menuOpen: "Open menu", menuClose: "Close menu", backToTop: "Back to the top", navAbout: "About", navPrograms: "Programs", navWorkshop: "Workshop", navDepartments: "Departments", navTeam: "People", navCommunity: "Community", navContact: "Contact",
     heroEyebrow: "Science · Research · Collaboration", heroTitle: "Advancing Azerbaijani science,<br /><em>together.</em>", heroText: "An open platform connecting Azerbaijani researchers, students, and science enthusiasts across the world.", joinUs: "Join the community", explorePrograms: "Explore our programs",
     manifestoLabel: "Our manifesto", people: "PEOPLE", ideas: "IDEAS", research: "RESEARCH", impact: "IMPACT", manifestoText: "A strong scientific community grows through knowledge-sharing and lasting collaboration.", scroll: "Discover more",
     aboutLabel: "About us", aboutLead: "We are a network of researchers crossing borders, sharing knowledge, and shaping <em>the future of Azerbaijani science</em> together.", aboutText1: "Azerbaijan Research Society (ARS) is a non-profit initiative connecting Azerbaijani scholars and students across scientific disciplines.", aboutText2: "Our mission is to create an accessible environment for open dialogue, mentorship, and multidisciplinary collaboration.", problemLabel: "The problem", problemTitle: "Direct access to opportunity is limited", problemText: "Many students cannot find formal pathways to active researchers, laboratories, and real research projects.", purposeLabel: "Our purpose", purposeTitle: "Turn shared questions into real outcomes", purposeText: "We bring people together across disciplines to create collaboration, research, and measurable academic outcomes.", statApplicants: "Applicants in our first round", statDepartments: "Research departments", statPathways: "Community pathways", valueBorderless: "Borderless", valueOpen: "Open community", valueInterdisciplinary: "Interdisciplinary", valueResults: "Result-oriented", valueGrowth: "Growth & contribution",
@@ -152,7 +248,7 @@ const translations = {
     peopleEyebrow: "People at ARS", peoplePageTitle: "Meet the people shaping<br /><em>our society.</em>", peoplePageText: "The Executive Board leads the society's daily direction and programs. The Scientific Advisory Board advises on academic quality, research priorities, and long-term development.", executiveChoiceTitle: "Executive Board", executiveChoiceText: "The team responsible for ARS strategy, programs, communications, and community operations.", advisoryChoiceTitle: "Scientific Advisory Board", advisoryChoiceText: "Researchers who strengthen the society's scientific direction and contribute expertise across disciplines.", exploreBoard: "Explore the board", backToPeople: "Back to People", executivePageText: "The team turning the society's mission into daily action and leading the delivery of its programs.", advisoryPageText: "Experts supporting ARS's scientific quality, interdisciplinary direction, and research connections.",
     communityKicker: "You have a place in the future of science", communityTitle: "Stay curious.<br />Make connections.<br /><em>Create impact.</em>", communityText: "Whether you are a researcher, student, mentor, or science enthusiast, the ARS community is open to you.", becomeMember: "Write to become a member",
     contactLabel: "Contact", contactTitle: "Have a question or an idea?<br /><em>Write to us.</em>", contactIntro: "Use this form for membership, events, partnerships, and scientific collaboration enquiries.", formName: "Full name", formEmail: "Email address", formOrganization: "University or organization", formCountry: "Country", formTopic: "Reason for contacting", formChooseTopic: "Choose a topic", topicMembership: "Membership", topicWorkshop: "Workshops and events", topicPartnership: "Partnership", topicSpeaker: "Speaker proposal", topicAdvisory: "Scientific Advisory Board", topicGeneral: "General enquiry", topicOther: "Other", formMessage: "Message", formConsent: "I agree that my information may be processed for the purpose of responding to my enquiry.", formSubmit: "Send message", formSending: "Sending…", formSuccess: "Thank you. Your message has been sent to the ARS team.", formError: "Your message could not be sent. Please try again later or email us directly.",
-    footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
+    notFoundTitle: "Page not found.", notFoundText: "The page you are looking for may have moved, changed, or no longer exists.", notFoundCta: "Return home", footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
   },
   amil: {
     name: "Amil Aligayev",
@@ -551,6 +647,15 @@ document.querySelectorAll("[data-board-visualization]").forEach((board) => {
 
 const programTabs = [...document.querySelectorAll("[data-program-tab]")];
 const programPanels = [...document.querySelectorAll("[data-program-panel]")];
+let programStageMeter = null;
+
+if (programTabs.length) {
+  programStageMeter = document.createElement("div");
+  programStageMeter.className = "program-stage-meter";
+  programStageMeter.setAttribute("aria-hidden", "true");
+  programStageMeter.innerHTML = '<span class="program-stage-track"><i></i></span><strong>01 / 04</strong>';
+  document.querySelector(".program-tabs")?.insertAdjacentElement("afterend", programStageMeter);
+}
 
 function activateProgramStage(stage, updateHash = true) {
   if (!programTabs.some((tab) => tab.dataset.programTab === stage)) return;
@@ -559,7 +664,21 @@ function activateProgramStage(stage, updateHash = true) {
     tab.setAttribute("aria-selected", String(active));
     tab.tabIndex = active ? 0 : -1;
   });
-  programPanels.forEach((panel) => { panel.hidden = panel.dataset.programPanel !== stage; });
+  programPanels.forEach((panel) => {
+    const active = panel.dataset.programPanel === stage;
+    panel.hidden = !active;
+    if (active && !reducedMotion) {
+      panel.animate(
+        [{ opacity: 0, transform: "translateY(12px)" }, { opacity: 1, transform: "translateY(0)" }],
+        { duration: 360, easing: "cubic-bezier(.2,.75,.2,1)" }
+      );
+    }
+  });
+  const activeIndex = programTabs.findIndex((tab) => tab.dataset.programTab === stage);
+  if (programStageMeter && activeIndex >= 0) {
+    programStageMeter.style.setProperty("--stage-progress", `${((activeIndex + 1) / programTabs.length) * 100}%`);
+    programStageMeter.querySelector("strong").textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(programTabs.length).padStart(2, "0")}`;
+  }
   if (updateHash && window.history?.replaceState) window.history.replaceState(null, "", `#${stage}`);
 }
 
@@ -594,7 +713,8 @@ const titleByLanguage = {
     people: "İnsanlar | Azərbaycan Tədqiqat Cəmiyyəti",
     executive: "İcra Şurası | Azərbaycan Tədqiqat Cəmiyyəti",
     advisory: "Elmi Məsləhət Şurası | Azərbaycan Tədqiqat Cəmiyyəti",
-    contact: "Əlaqə | Azərbaycan Tədqiqat Cəmiyyəti"
+    contact: "Əlaqə | Azərbaycan Tədqiqat Cəmiyyəti",
+    notFound: "Səhifə tapılmadı | Azərbaycan Tədqiqat Cəmiyyəti"
   },
   en: {
     home: "Azerbaijan Research Society | ARS",
@@ -605,7 +725,8 @@ const titleByLanguage = {
     people: "People | Azerbaijan Research Society",
     executive: "Executive Board | Azerbaijan Research Society",
     advisory: "Scientific Advisory Board | Azerbaijan Research Society",
-    contact: "Contact | Azerbaijan Research Society"
+    contact: "Contact | Azerbaijan Research Society",
+    notFound: "Page Not Found | Azerbaijan Research Society"
   }
 };
 
@@ -649,6 +770,8 @@ function setLanguage(language) {
   });
   document.querySelector('meta[name="description"]')?.setAttribute("content", dictionary.metaDescription);
   document.querySelector('meta[property="og:description"]')?.setAttribute("content", dictionary.metaDescription);
+  backToTop.setAttribute("aria-label", dictionary.backToTop);
+  backToTop.title = dictionary.backToTop;
   if (menuButton && navigation) menuButton.setAttribute("aria-label", navigation.classList.contains("open") ? dictionary.menuClose : dictionary.menuOpen);
   if (currentProfile && profileDialog?.open) renderProfile(currentProfile);
   updateContactFormLanguage();
@@ -819,6 +942,43 @@ document.addEventListener("keydown", (event) => {
     menuButton.setAttribute("aria-label", translations[document.documentElement.lang].menuOpen);
     menuButton.focus();
   }
+});
+
+const statisticValues = [...document.querySelectorAll(".stats strong")];
+function animateStatistic(element) {
+  if (element.dataset.counted === "true") return;
+  element.dataset.counted = "true";
+  const original = element.textContent.trim();
+  const target = Number.parseInt(original, 10);
+  if (!Number.isFinite(target) || reducedMotion) return;
+  const suffix = original.replace(/[\d]/g, "");
+  const width = original.match(/^0\d/) ? original.match(/^\d+/)[0].length : 0;
+  const startedAt = performance.now();
+  const duration = 900;
+  function count(now) {
+    const phase = Math.min((now - startedAt) / duration, 1);
+    const eased = 1 - Math.pow(1 - phase, 3);
+    const value = Math.round(target * eased);
+    element.textContent = `${width ? String(value).padStart(width, "0") : value}${suffix}`;
+    if (phase < 1) requestAnimationFrame(count);
+    else element.textContent = original;
+  }
+  requestAnimationFrame(count);
+}
+
+if (statisticValues.length && "IntersectionObserver" in window && !reducedMotion) {
+  const statisticObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      animateStatistic(entry.target);
+      statisticObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.7 });
+  statisticValues.forEach((element) => statisticObserver.observe(element));
+}
+
+document.querySelectorAll(".reveal").forEach((element, index) => {
+  element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 55}ms`);
 });
 
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
