@@ -39,6 +39,7 @@ function hidePageLoader() {
   pageLoader.classList.add("is-complete");
   pageLoader.setAttribute("aria-hidden", "true");
   document.body.classList.remove("loader-active");
+  document.body.classList.add("site-ready");
 }
 
 function startEntryLoader() {
@@ -166,6 +167,9 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
 
 const hero = document.querySelector(".hero");
 if (hero) {
+  hero.id = hero.id || "home";
+  const logoScene = hero.querySelector("[data-logo-scene]");
+  const scenePlane = logoScene?.querySelector(".scene-plane");
   const network = document.createElement("div");
   network.className = "hero-network";
   network.setAttribute("aria-hidden", "true");
@@ -183,7 +187,7 @@ if (hero) {
     <i style="--node-x:88%;--node-y:42%;--node-color:var(--red)"></i>
     <i style="--node-x:47%;--node-y:78%;--node-color:var(--blue)"></i>
     <i style="--node-x:76%;--node-y:67%;--node-color:var(--green)"></i>`;
-  hero.prepend(network);
+  (scenePlane || hero).prepend(network);
 
   if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
     let heroFrame = 0;
@@ -203,6 +207,42 @@ if (hero) {
       hero.style.setProperty("--hero-shift-x", "0px");
       hero.style.setProperty("--hero-shift-y", "0px");
     });
+
+    logoScene?.addEventListener("pointermove", (event) => {
+      const bounds = logoScene.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      logoScene.style.setProperty("--scene-rotate-x", `${y * -7}deg`);
+      logoScene.style.setProperty("--scene-rotate-y", `${x * 7}deg`);
+    }, { passive: true });
+    logoScene?.addEventListener("pointerleave", () => {
+      logoScene.style.setProperty("--scene-rotate-x", "0deg");
+      logoScene.style.setProperty("--scene-rotate-y", "0deg");
+    });
+  }
+}
+
+if (document.body.dataset.page === "home") {
+  const railSections = [
+    ["home", "railHome"], ["about", "navAbout"], ["programs", "navPrograms"],
+    ["workshop", "navWorkshop"], ["departments", "navDepartments"], ["people", "navTeam"],
+    ["community", "navCommunity"]
+  ].filter(([id]) => document.getElementById(id));
+  const sectionRail = document.createElement("nav");
+  sectionRail.className = "section-rail";
+  sectionRail.setAttribute("aria-label", "Səhifə bölmələri");
+  sectionRail.dataset.i18nAriaLabel = "sectionNavigation";
+  sectionRail.innerHTML = railSections.map(([id, key], index) => `<a href="#${id}" data-section-link="${id}"><i></i><span>${String(index + 1).padStart(2, "0")}</span><b data-i18n="${key}"></b></a>`).join("");
+  document.body.append(sectionRail);
+
+  if ("IntersectionObserver" in window) {
+    const railObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        sectionRail.querySelectorAll("a").forEach((link) => link.classList.toggle("is-current", link.dataset.sectionLink === entry.target.id));
+      });
+    }, { rootMargin: "-42% 0px -48%", threshold: 0 });
+    railSections.forEach(([id]) => railObserver.observe(document.getElementById(id)));
   }
 }
 
@@ -215,16 +255,24 @@ if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
     card.prepend(light);
     card.addEventListener("pointermove", (event) => {
       const bounds = card.getBoundingClientRect();
-      card.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
-      card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
+      const localX = event.clientX - bounds.left;
+      const localY = event.clientY - bounds.top;
+      card.style.setProperty("--spot-x", `${localX}px`);
+      card.style.setProperty("--spot-y", `${localY}px`);
+      card.style.setProperty("--tilt-x", `${((localY / bounds.height) - 0.5) * -4}deg`);
+      card.style.setProperty("--tilt-y", `${((localX / bounds.width) - 0.5) * 5}deg`);
     }, { passive: true });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--tilt-x", "0deg");
+      card.style.setProperty("--tilt-y", "0deg");
+    });
   });
 }
 
 const translations = {
   az: {
     skip: "Əsas məzmuna keç", navLabel: "Əsas naviqasiya", languageLabel: "Dil seçimi", statsLabel: "Cəmiyyət haqqında göstəricilər", valuesLabel: "Dəyərlərimiz", journeyLabel: "Uzunmüddətli inkişaf yolu", menuOpen: "Menyunu aç", menuClose: "Menyunu bağla", backToTop: "Səhifənin əvvəlinə qayıt", navAbout: "Haqqımızda", navPrograms: "Proqramlar", navWorkshop: "Emalatxana", navDepartments: "Şöbələr", navTeam: "İnsanlar", navCommunity: "İcma", navContact: "Əlaqə",
-    heroEyebrow: "Elm · Tədqiqat · Əməkdaşlıq", heroTitle: "Azərbaycan elmini<br /><em>birlikdə irəli aparaq.</em>", heroText: "Dünyanın hər yerində çalışan azərbaycanlı tədqiqatçıları, tələbələri və elm həvəskarlarını bir araya gətirən açıq platforma.", joinUs: "İcmaya qoşul", explorePrograms: "Proqramları kəşf et",
+    heroEyebrow: "Elm · Tədqiqat · Əməkdaşlıq", heroTitle: "Azərbaycan elmini<br /><em>birlikdə irəli aparaq.</em>", heroText: "Dünyanın hər yerində çalışan azərbaycanlı tədqiqatçıları, tələbələri və elm həvəskarlarını bir araya gətirən açıq platforma.", joinUs: "İcmaya qoşul", explorePrograms: "Proqramları kəşf et", livingLogoLabel: "ARS qlobal tədqiqat şəbəkəsi", livingLogoKicker: "CANLI TƏDQİQAT ŞƏBƏKƏSİ", livingLogoStatus: "İdeyaları sərhədlər boyunca birləşdiririk", nodeEngineering: "Mühəndislik", nodeLife: "Həyat elmləri", nodeData: "Data və Sİ", nodeHumanities: "Humanitar elmlər", railHome: "Ana səhifə", sectionNavigation: "Səhifə bölmələri",
     manifestoLabel: "Bizim manifestimiz", people: "İNSANLAR", ideas: "İDEYALAR", research: "TƏDQİQAT", impact: "TƏSİR", manifestoText: "Güclü elmi icma bilik paylaşımı və davamlı əməkdaşlıqla yaranır.", scroll: "Daha çox kəşf et",
     aboutLabel: "Haqqımızda", aboutLead: "Sərhədləri aşan, biliyi paylaşan və <em>Azərbaycan elminin gələcəyini</em> birlikdə quran tədqiqatçılar şəbəkəsiyik.", aboutText1: "Azərbaycan Tədqiqat Cəmiyyəti (ARS) müxtəlif elm sahələrindən olan azərbaycanlı alim və tələbələr arasında əlaqə yaradan qeyri-kommersiya təşəbbüsüdür.", aboutText2: "Məqsədimiz açıq dialoq, mentorluq və multidissiplinar əməkdaşlıq üçün əlçatan mühit formalaşdırmaqdır.", problemLabel: "Problem", problemTitle: "İmkanlara birbaşa çıxış məhduddur", problemText: "Bir çox tələbə aktiv tədqiqatçılara, laboratoriyalara və real layihələrə aparan formal kanallara çıxış tapa bilmir.", purposeLabel: "Məqsədimiz", purposeTitle: "Ortaq sualları real nəticələrə çevirmək", purposeText: "Fərqli sahələrdən insanları bir araya gətirərək əməkdaşlıq, tədqiqat və ölçülə bilən akademik nəticələr yaradırıq.", statApplicants: "İlk mərhələ müraciətçisi", statDepartments: "Elmi şöbə", statPathways: "İcma fəaliyyət istiqaməti", valueBorderless: "Sərhədsizlik", valueOpen: "Açıq icma", valueInterdisciplinary: "Fənlərarası", valueResults: "Nəticə yönümlülük", valueGrowth: "İnkişaf və töhfə",
     programsLabel: "İcma modeli", programsTitle: "İdeyadan real<br /><em>tədqiqat nəticəsinə.</em>", programsIntro: "ARS proqramları ilk elmi maraqdan başlayaraq bacarıq, əməkdaşlıq və görünən akademik nəticəyə qədər aydın inkişaf yolu yaradır.", seminarsTitle: "Tədqiqatçı görüşləri", seminarsText: "Aktiv tədqiqatçılar, onların təcrübəsi və iş istiqamətləri ilə birbaşa tanışlıq.", networkTitle: "Mentor uyğunlaşdırılması", networkText: "Tələbələri maraqlarına uyğun mentor və tədqiqat istiqaməti ilə əlaqələndirmək.", mentorshipTitle: "Aylıq masterklaslar", mentorshipText: "Elmi yazı, məlumatların təhlili, layihə təklifi, qrant və rəy prosesi üzrə praktiki bacarıqlar.", sprintsTitle: "Layihə sprintləri və ortaq laboratoriyalar", sprintsText: "İştirakçıları real tədqiqat problemləri ətrafında birləşdirən nəticə yönümlü əməkdaşlıq.", outputsTitle: "Nəticələrin təqdimatı", outputsText: "Öyrənməni məqalə, poster, məlumat dəsti və təqdimat kimi konkret akademik nəticələrə çevirmək.", learnMore: "Ətraflı", journeyTitle: "Uzunmüddətli hədəf", journeyCommunity: "Tədqiqat icması", journeySociety: "Tədqiqat cəmiyyəti", journeyNetwork: "Tədqiqat şəbəkəsi", journeyCenter: "Müstəqil tədqiqat mərkəzi", programPathLabel: "Dörd mərhələli tədqiqat yolu", programPathTitle: "Maraqdan elmi təsirə gedən aydın yol.", programPathHint: "Hər mərhələni seçərək iştirakçıların necə əlaqə qurduğunu, bacarıq qazandığını, əməkdaşlıq etdiyini və nəticəsini paylaşdığını görün.", phaseConnect: "Əlaqə qur", phaseDevelop: "Bacarıq qazan", phaseCollaborate: "Birgə tədqiq et", phasePublish: "Nəticəni paylaş", phaseConnectText: "İnsanları, ideyaları və uyğun istiqaməti bir araya gətiririk.", phaseDevelopText: "Tədqiqat aparmaq üçün praktik və ötürülə bilən bacarıqlar qururuq.", phaseCollaborateText: "Ortaq sualları strukturlaşdırılmış layihələrə çeviririk.", phasePublishText: "Görülən işi görünən və paylaşılması mümkün elmi nəticəyə çeviririk.", programIncludes: "Bu mərhələyə daxildir", programOutcome: "Gözlənilən nəticə", connectOutcome: "Daha aydın istiqamət və doğru elmi əlaqələr", developOutcome: "Müstəqil işləmək üçün əsas tədqiqat bacarıqları", collaborateOutcome: "Komanda işi, layihə təcrübəsi və yoxlanılan nəticələr", publishOutcome: "Məqalə, poster, məlumat dəsti və ya elmi təqdimat", programPathCta: "Bu mərhələ ilə maraqlanıram", programOverviewLabel: "ARS tədqiqat yolu",
@@ -238,7 +286,7 @@ const translations = {
   },
   en: {
     skip: "Skip to main content", navLabel: "Primary navigation", languageLabel: "Language selection", statsLabel: "Society highlights", valuesLabel: "Our values", journeyLabel: "Long-term development path", menuOpen: "Open menu", menuClose: "Close menu", backToTop: "Back to the top", navAbout: "About", navPrograms: "Programs", navWorkshop: "Workshop", navDepartments: "Departments", navTeam: "People", navCommunity: "Community", navContact: "Contact",
-    heroEyebrow: "Science · Research · Collaboration", heroTitle: "Advancing Azerbaijani science,<br /><em>together.</em>", heroText: "An open platform connecting Azerbaijani researchers, students, and science enthusiasts across the world.", joinUs: "Join the community", explorePrograms: "Explore our programs",
+    heroEyebrow: "Science · Research · Collaboration", heroTitle: "Advancing Azerbaijani science,<br /><em>together.</em>", heroText: "An open platform connecting Azerbaijani researchers, students, and science enthusiasts across the world.", joinUs: "Join the community", explorePrograms: "Explore our programs", livingLogoLabel: "ARS global research network", livingLogoKicker: "LIVE RESEARCH NETWORK", livingLogoStatus: "Connecting ideas across borders", nodeEngineering: "Engineering", nodeLife: "Life sciences", nodeData: "Data & AI", nodeHumanities: "Humanities", railHome: "Home", sectionNavigation: "Page sections",
     manifestoLabel: "Our manifesto", people: "PEOPLE", ideas: "IDEAS", research: "RESEARCH", impact: "IMPACT", manifestoText: "A strong scientific community grows through knowledge-sharing and lasting collaboration.", scroll: "Discover more",
     aboutLabel: "About us", aboutLead: "We are a network of researchers crossing borders, sharing knowledge, and shaping <em>the future of Azerbaijani science</em> together.", aboutText1: "Azerbaijan Research Society (ARS) is a non-profit initiative connecting Azerbaijani scholars and students across scientific disciplines.", aboutText2: "Our mission is to create an accessible environment for open dialogue, mentorship, and multidisciplinary collaboration.", problemLabel: "The problem", problemTitle: "Direct access to opportunity is limited", problemText: "Many students cannot find formal pathways to active researchers, laboratories, and real research projects.", purposeLabel: "Our purpose", purposeTitle: "Turn shared questions into real outcomes", purposeText: "We bring people together across disciplines to create collaboration, research, and measurable academic outcomes.", statApplicants: "Applicants in our first round", statDepartments: "Research departments", statPathways: "Community pathways", valueBorderless: "Borderless", valueOpen: "Open community", valueInterdisciplinary: "Interdisciplinary", valueResults: "Result-oriented", valueGrowth: "Growth & contribution",
     programsLabel: "Community model", programsTitle: "From an idea to a real<br /><em>research outcome.</em>", programsIntro: "ARS programs create a clear progression from first scientific curiosity to skills, collaboration, and visible academic outcomes.", seminarsTitle: "Researcher meetups", seminarsText: "Direct exposure to active researchers, their experience, and areas of work.", networkTitle: "Mentor matching", networkText: "Connecting students with mentors and research directions that fit their interests.", mentorshipTitle: "Monthly masterclasses", mentorshipText: "Practical skills in academic writing, data analysis, proposals, grants, and peer review.", sprintsTitle: "Project sprints & shared labs", sprintsText: "Result-oriented collaboration bringing participants together around real research problems.", outputsTitle: "Presenting results", outputsText: "Turning learning into papers, posters, datasets, presentations, and other concrete academic outputs.", learnMore: "Learn more", journeyTitle: "Long-term goal", journeyCommunity: "Research community", journeySociety: "Research society", journeyNetwork: "Research network", journeyCenter: "Independent research center", programPathLabel: "Four-stage research pathway", programPathTitle: "A clear route from curiosity to research impact.", programPathHint: "Select each stage to see how participants connect, build capability, collaborate, and share their work.", phaseConnect: "Connect", phaseDevelop: "Develop", phaseCollaborate: "Collaborate", phasePublish: "Publish", phaseConnectText: "We bring people, ideas, and the right research direction together.", phaseDevelopText: "We build practical, transferable skills for doing rigorous research.", phaseCollaborateText: "We turn shared questions into structured research projects.", phasePublishText: "We help convert completed work into visible, shareable academic outputs.", programIncludes: "This stage includes", programOutcome: "Expected outcome", connectOutcome: "Clearer direction and the right research relationships", developOutcome: "Core research skills for more independent work", collaborateOutcome: "Team experience, project evidence, and tested results", publishOutcome: "A paper, poster, dataset, or scientific presentation", programPathCta: "I am interested in this stage", programOverviewLabel: "ARS research pathway",
