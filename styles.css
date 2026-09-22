@@ -301,6 +301,7 @@ body.loader-active { overflow: hidden; }
 
 .section-heading.dark h2 em { color: var(--red); }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.home-executive-grid > .person-card:last-child:nth-child(3n + 1) { grid-column: 2; }
 .person-card { min-height: 510px; padding: 28px 24px 23px; text-align: center; background: #fbfcfd; border: 1px solid #d6e4ec; border-radius: 28px; cursor: pointer; transition: transform .25s, box-shadow .25s; }
 .person-card:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(7,31,74,.08); }
 .portrait-wrap { width: 205px; aspect-ratio: 1; margin: 0 auto 25px; border-radius: 50%; }
@@ -427,6 +428,7 @@ body.loader-active { overflow: hidden; }
   .site-nav.open { display: flex; }.site-nav a { width: 100%; padding: 13px 0; }
   .hero { min-height: calc(100vh - 84px); }.hero-grid { grid-template-columns: 1fr; gap: 45px; padding-block: 70px 35px; }.hero-card { max-width: 520px; }
   .split-layout, .section-heading, .workshop-intro, .advisory-heading { grid-template-columns: 1fr; gap: 28px; }.program-grid, .team-grid, .department-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-executive-grid > .person-card:last-child:nth-child(3n + 1) { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; }
   .advisory-grid { grid-template-columns: repeat(2, 1fr); }.advisory-grid .person-card, .advisory-grid .person-card:nth-child(4), .advisory-grid .person-card:nth-child(5) { grid-column: auto; }
   .board-intro { grid-template-columns: 1fr; gap: 26px; }.choice-card { min-height: 360px; padding: 34px; }
   .program-card, .community-model .program-card:nth-child(4), .community-model .program-card:nth-child(5) { grid-column: auto; }
@@ -448,6 +450,7 @@ body.loader-active { overflow: hidden; }
   .section { padding: 85px 0; }.about-columns, .purpose-grid, .stats { grid-template-columns: 1fr; gap: 22px; }.stats { margin-top: 45px; }.stats > div { display: flex; align-items: baseline; gap: 18px; }
   .page-hero { padding: 78px 0 68px; }.people-choice-section, .board-page, .content-page { padding: 72px 0 90px; }.choice-grid { grid-template-columns: 1fr; }.choice-card { min-height: 330px; padding: 30px; }
   .section-heading { margin-bottom: 45px; }.program-grid, .team-grid, .department-grid { grid-template-columns: 1fr; }.program-card { min-height: 350px; }
+  .home-executive-grid > .person-card:last-child:nth-child(3n + 1) { grid-column: auto; width: auto; justify-self: stretch; }
   .program-overview { margin-top: -8px; }.program-overview a { min-height: 76px; padding: 17px; }.programs-page { padding-top: 78px; }.program-pathway-heading { margin-bottom: 38px; }.program-pathway { border-radius: 22px; }.program-tab { min-height: 88px; padding: 18px; }.program-tab::after { left: 17px; }.program-tab[aria-selected="true"]::after { right: 17px; }.program-panel { gap: 28px; padding: 25px 20px; }.program-stage-summary { margin-bottom: 30px; }.program-feature-grid { grid-template-columns: 1fr; }.program-panel-visual { min-height: 235px; }.program-outcome { padding: 17px; }
   .advisory-board { margin-top: 72px; padding-top: 58px; }.advisory-heading { margin-bottom: 42px; }
   .journey { align-items: flex-start; flex-direction: column; }.journey i { transform: rotate(90deg); }.department-card { min-height: 230px; }.department-note { text-align: left; }
