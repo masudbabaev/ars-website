@@ -348,7 +348,7 @@ const profiles = {
   masud: {
     name: "Məsud Babayev",
     roleKey: "roleCofounder",
-    image: "assets/masud.webp?v=25",
+    image: "assets/masud.webp?v=26",
     bio: {
       az: [
         "Məsud Babayev Azərbaycan Dövlət Neft və Sənaye Universitetində Neft-qaz mühəndisliyi üzrə bakalavr, Xəzər Universitetində Neft-qaz yataqlarının işlənilməsi üzrə magistr təhsili alıb. Magistratura dövründə SOCAR-da mühəndis kimi çalışıb.",

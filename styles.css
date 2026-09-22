@@ -307,9 +307,9 @@ body.loader-active { overflow: hidden; }
 .portrait-wrap { width: 205px; aspect-ratio: 1; margin: 0 auto 25px; overflow: hidden; background: #f5fbfe; border: 2px solid var(--blue); border-radius: 50%; box-shadow: 0 0 0 4px #fff, 0 0 0 6px rgba(22,169,223,.35), 0 14px 28px rgba(7,31,74,.1); }
 .portrait-wrap img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .person-card h3 { margin: 0 0 9px; font-size: 1.12rem; }
-.person-name-row { display: flex; gap: 9px; align-items: center; justify-content: center; margin: 0 0 9px; }
+.person-name-row { display: flex; min-height: 29px; gap: 9px; align-items: center; justify-content: center; margin: 0 0 9px; }
 .person-name-row h3 { margin: 0; }
-.affiliation-mark { display: inline-grid; min-width: 34px; height: 27px; place-items: center; padding: 0 7px; color: white; background: var(--navy); border: 1px solid rgba(255,255,255,.48); border-radius: 8px; box-shadow: 0 5px 13px rgba(7,31,74,.13); cursor: help; font-size: .54rem; font-weight: 900; letter-spacing: -.015em; line-height: 1; }
+.affiliation-mark { display: inline-grid; flex: 0 0 56px; width: 56px; height: 28px; place-items: center; padding: 0 6px; color: white; background: var(--navy); border: 1px solid rgba(255,255,255,.48); border-radius: 8px; box-shadow: 0 5px 13px rgba(7,31,74,.13); cursor: help; font-size: .55rem; font-weight: 900; letter-spacing: -.015em; line-height: 1; white-space: nowrap; }
 .affiliation-mark[data-tone="blue"] { background: #1679bb; }.affiliation-mark[data-tone="teal"] { background: #087f83; }.affiliation-mark[data-tone="green"] { background: #17844d; }.affiliation-mark[data-tone="red"] { background: #b72d3c; }.affiliation-mark[data-tone="navy"] { background: #071f4a; }
 .person-card p { min-height: 42px; margin: 0; color: #526a80; font-size: .72rem; font-weight: 800; line-height: 1.45; text-transform: uppercase; }
 .affiliation { display: block; min-height: 48px; margin-top: 11px; color: #61778c; font-size: .76rem; line-height: 1.6; }
