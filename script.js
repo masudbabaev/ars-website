@@ -281,7 +281,7 @@ const translations = {
     teamLabel: "İcra Şurası", teamTitle: "İdeyanın arxasındakı<br /><em>insanlarla tanış olun.</em>", advisoryLabel: "Elmi Məsləhət Şurası", advisoryTitle: "Təcrübəni elmi istiqamətə<br /><em>çevirən mütəxəssislər.</em>", roleFounder: "Təsisçi", roleCofounder: "Həmtəsisçi", roleResearch: "Tədqiqat Proqramları Direktoru", roleComms: "Kommunikasiya və İctimaiyyətlə Əlaqələr Rəhbəri", roleProject: "Layihə Koordinatoru", roleAdmin: "İnzibati İşlər üzrə Mütəxəssis", roleClinical: "Klinik psixoloq", roleAdvisory: "Elmi Məsləhət Şurasının üzvü", roleAdvisoryHead: "Elmi Məsləhət Şurasının rəhbəri", leadershipLayer: "Rəhbərlik", operationsLayer: "Proqramlar və əməliyyatlar", chairLayer: "Şura rəhbəri", advisoryMembersLayer: "Şura üzvləri", boardHint: "Profilə baxmaq üçün şəxsi seçin", ibrahimProfile: "Sakarya Universiteti · PhD namizədi<br />Bərk cisim fizikası · DFT", masudProfile: "KFUPM · PhD namizədi<br />Qaz hidratları · Lay modelləşdirilməsi", humayProfile: "Imperial College London · MSc<br />Aerokosmik sahə · Maye mexanikası", jaleProfile: "VMU & JGU · Sosiolinqvistika<br />Kod-dəyişmə · Dil variasiyası", nargizProfile: "Xəzər Universiteti<br />Data analitikası · Neyroelm", zehraProfile: "Xəzər Universiteti<br />Lay modelləşdirilməsi · Maşın öyrənməsi", xeyranseProfile: "Xəzər Tibb Mərkəzi<br />Klinik psixologiya · Psixoterapiya", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Hesablama materialşünaslığı · Süni intellekt", azizehProfile: "Sabancı Universiteti<br />Ağıllı örtüklər · Biomateriallar", sabrinProfile: "Al Ain Universiteti · Abu Dabi<br />Tibb təhsili · Rəqəmsal səhiyyə", ulkarProfile: "Fizika İnstitutu · ADDA<br />Fotokataliz · Kondensə olunmuş maddə fizikası", nijatProfile: "ECOHUB · Sakarya Universiteti<br />Analitik kimya · Davamlı materiallar", orkhanProfile: "ADNSU · Universal Energy<br />Enerji sistemləri · Bərpa olunan enerji", viewProfile: "Profilə bax", closeProfile: "Profili bağla", profileAbout: "Haqqında", profileInterests: "Elmi maraqlar", profileLinks: "Əlaqə, elmi və peşəkar profillər", profilePublications: "Seçilmiş nəşrlər", email: "E-poçt", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
     peopleEyebrow: "ARS insanları", peoplePageTitle: "Cəmiyyətimizi formalaşdıran<br /><em>insanlarla tanış olun.</em>", peoplePageText: "İcra Şurası cəmiyyətin gündəlik istiqamətini və proqramlarını idarə edir. Elmi Məsləhət Şurası isə akademik keyfiyyət, tədqiqat prioritetləri və uzunmüddətli inkişaf üzrə məsləhət verir.", executiveChoiceTitle: "İcra Şurası", executiveChoiceText: "ARS-in strategiyasını, proqramlarını, kommunikasiyasını və icma fəaliyyətini idarə edən komanda.", advisoryChoiceTitle: "Elmi Məsləhət Şurası", advisoryChoiceText: "Cəmiyyətin elmi istiqamətini gücləndirən və müxtəlif sahələr üzrə təcrübə təqdim edən tədqiqatçılar.", exploreBoard: "Şuraya bax", backToPeople: "İnsanlar bölməsinə qayıt", executivePageText: "Cəmiyyətin missiyasını gündəlik fəaliyyətə çevirən və proqramların həyata keçirilməsinə rəhbərlik edən komanda.", advisoryPageText: "ARS-in elmi keyfiyyətini, fənlərarası istiqamətini və tədqiqat əlaqələrini dəstəkləyən mütəxəssislər.",
     communityKicker: "Elmin gələcəyində sənin də yerin var", communityTitle: "Maraq göstər.<br />Əlaqə qur.<br /><em>Təsir yarat.</em>", communityText: "Tədqiqatçı, tələbə, mentor və ya elm həvəskarı olmağınızdan asılı olmayaraq, ARS icması sizin üçün açıqdır.", becomeMember: "Üzv olmaq üçün yaz",
-    contactLabel: "Əlaqə", contactTitle: "Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em>", contactIntro: "Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.", formName: "Ad və soyad", formEmail: "E-poçt ünvanı", formOrganization: "Universitet və ya təşkilat", formCountry: "Ölkə", formTopic: "Müraciətin mövzusu", formChooseTopic: "Mövzu seçin", topicMembership: "Üzvlük", topicWorkshop: "Təlim və tədbirlər", topicPartnership: "Tərəfdaşlıq", topicSpeaker: "Spiker təklifi", topicAdvisory: "Elmi Məsləhət Şurası", topicGeneral: "Ümumi müraciət", topicOther: "Digər", formMessage: "Mesaj", formConsent: "Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.", formSubmit: "Mesajı göndər", formSending: "Göndərilir…", formSuccess: "Təşəkkür edirik. Mesajınız ARS komandasına göndərildi.", formError: "Mesaj göndərilmədi. Bir qədər sonra yenidən cəhd edin və ya bizə e-poçt göndərin.",
+    contactLabel: "Əlaqə", contactTitle: "Sualınız və ya ideyanız var?<br /><em>Bizə yazın.</em>", contactIntro: "Üzvlük, tədbirlər, tərəfdaşlıq və elmi əməkdaşlıq barədə müraciətlərinizi bu forma vasitəsilə göndərə bilərsiniz.", formName: "Ad və soyad", formEmail: "E-poçt ünvanı", formOrganization: "Universitet və ya təşkilat", formCountry: "Ölkə", formTopic: "Müraciətin mövzusu", formChooseTopic: "Mövzu seçin", topicMembership: "Üzvlük", topicWorkshop: "Təlim və tədbirlər", topicPartnership: "Tərəfdaşlıq", topicSpeaker: "Spiker təklifi", topicAdvisory: "Elmi Məsləhət Şurası", topicGeneral: "Ümumi müraciət", topicOther: "Digər", formMessage: "Mesaj", formConsent: "Məlumatlarımın müraciətimə cavab vermək məqsədilə emal edilməsinə razıyam.", formSubmit: "Mesajı göndər", formSending: "Göndərilir…", formSuccess: "Təşəkkür edirik. Mesajınız ARS komandasına göndərildi.", formError: "Mesaj göndərilmədi. Bir qədər sonra yenidən cəhd edin və ya bizə e-poçt göndərin.", formRequired: "Bu sahəni doldurun.", formEmailInvalid: "Düzgün e-poçt ünvanı daxil edin.", formMessageShort: "Mesaj ən azı 20 simvoldan ibarət olmalıdır.", formConsentRequired: "Davam etmək üçün razılığınızı təsdiqləyin.", formErrorsSummary: "Zəhmət olmasa işarələnmiş sahələri yoxlayın.",
     notFoundTitle: "Səhifə tapılmadı.", notFoundText: "Axtardığınız səhifə köçürülmüş, yenilənmiş və ya mövcud olmaya bilər.", notFoundCta: "Ana səhifəyə qayıt", footerTagline: "Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.", footerExplore: "Kəşf et", footerConnect: "Əlaqə", metaDescription: "Azərbaycan Tədqiqat Cəmiyyəti — azərbaycanlı tədqiqatçıları birləşdirən qlobal elmi icma."
   },
   en: {
@@ -295,7 +295,7 @@ const translations = {
     teamLabel: "Executive Board", teamTitle: "Meet the people<br /><em>behind the idea.</em>", advisoryLabel: "Scientific Advisory Board", advisoryTitle: "Experts turning experience into<br /><em>scientific direction.</em>", roleFounder: "Founder", roleCofounder: "Co-founder", roleResearch: "Director of Research Programs", roleComms: "Head of Communications & Public Relations", roleProject: "Project Coordinator", roleAdmin: "Administrative Affairs Specialist", roleClinical: "Clinical Psychologist", roleAdvisory: "Scientific Advisory Board member", roleAdvisoryHead: "Head of the Scientific Advisory Board", leadershipLayer: "Leadership", operationsLayer: "Programs & operations", chairLayer: "Board head", advisoryMembersLayer: "Board members", boardHint: "Select a person to view their profile", ibrahimProfile: "Sakarya University · PhD candidate<br />Solid-state physics · DFT", masudProfile: "KFUPM · PhD candidate<br />Gas hydrates · Reservoir modelling", humayProfile: "Imperial College London · MSc<br />Aerospace · Fluid mechanics", jaleProfile: "VMU & JGU · Sociolinguistics<br />Code-switching · Language variation", nargizProfile: "Khazar University<br />Data analytics · Neuroscience", zehraProfile: "Khazar University<br />Reservoir modelling · Machine learning", xeyranseProfile: "Khazar Medical Center<br />Clinical psychology · Psychotherapy", amilProfile: "NCBJ / NOMATEN · BEU · UCL<br />Computational materials science · AI", azizehProfile: "Sabancı University<br />Smart coatings · Biomaterials", sabrinProfile: "Al Ain University · Abu Dhabi<br />Medical education · Digital health", ulkarProfile: "Institute of Physics · ASMA<br />Photocatalysis · Condensed-matter physics", nijatProfile: "ECOHUB · Sakarya University<br />Analytical chemistry · Sustainable materials", orkhanProfile: "ASOIU · Universal Energy<br />Energy systems · Renewable energy", viewProfile: "View profile", closeProfile: "Close profile", profileAbout: "About", profileInterests: "Research interests", profileLinks: "Contact, academic & professional profiles", profilePublications: "Selected publications", email: "Email", linkedIn: "LinkedIn", googleScholar: "Google Scholar", orcid: "ORCID", scopus: "Scopus", researchGate: "ResearchGate",
     peopleEyebrow: "People at ARS", peoplePageTitle: "Meet the people shaping<br /><em>our society.</em>", peoplePageText: "The Executive Board leads the society's daily direction and programs. The Scientific Advisory Board advises on academic quality, research priorities, and long-term development.", executiveChoiceTitle: "Executive Board", executiveChoiceText: "The team responsible for ARS strategy, programs, communications, and community operations.", advisoryChoiceTitle: "Scientific Advisory Board", advisoryChoiceText: "Researchers who strengthen the society's scientific direction and contribute expertise across disciplines.", exploreBoard: "Explore the board", backToPeople: "Back to People", executivePageText: "The team turning the society's mission into daily action and leading the delivery of its programs.", advisoryPageText: "Experts supporting ARS's scientific quality, interdisciplinary direction, and research connections.",
     communityKicker: "You have a place in the future of science", communityTitle: "Stay curious.<br />Make connections.<br /><em>Create impact.</em>", communityText: "Whether you are a researcher, student, mentor, or science enthusiast, the ARS community is open to you.", becomeMember: "Write to become a member",
-    contactLabel: "Contact", contactTitle: "Have a question or an idea?<br /><em>Write to us.</em>", contactIntro: "Use this form for membership, events, partnerships, and scientific collaboration enquiries.", formName: "Full name", formEmail: "Email address", formOrganization: "University or organization", formCountry: "Country", formTopic: "Reason for contacting", formChooseTopic: "Choose a topic", topicMembership: "Membership", topicWorkshop: "Workshops and events", topicPartnership: "Partnership", topicSpeaker: "Speaker proposal", topicAdvisory: "Scientific Advisory Board", topicGeneral: "General enquiry", topicOther: "Other", formMessage: "Message", formConsent: "I agree that my information may be processed for the purpose of responding to my enquiry.", formSubmit: "Send message", formSending: "Sending…", formSuccess: "Thank you. Your message has been sent to the ARS team.", formError: "Your message could not be sent. Please try again later or email us directly.",
+    contactLabel: "Contact", contactTitle: "Have a question or an idea?<br /><em>Write to us.</em>", contactIntro: "Use this form for membership, events, partnerships, and scientific collaboration enquiries.", formName: "Full name", formEmail: "Email address", formOrganization: "University or organization", formCountry: "Country", formTopic: "Reason for contacting", formChooseTopic: "Choose a topic", topicMembership: "Membership", topicWorkshop: "Workshops and events", topicPartnership: "Partnership", topicSpeaker: "Speaker proposal", topicAdvisory: "Scientific Advisory Board", topicGeneral: "General enquiry", topicOther: "Other", formMessage: "Message", formConsent: "I agree that my information may be processed for the purpose of responding to my enquiry.", formSubmit: "Send message", formSending: "Sending…", formSuccess: "Thank you. Your message has been sent to the ARS team.", formError: "Your message could not be sent. Please try again later or email us directly.", formRequired: "Please complete this field.", formEmailInvalid: "Enter a valid email address.", formMessageShort: "Your message must contain at least 20 characters.", formConsentRequired: "Confirm your consent before continuing.", formErrorsSummary: "Please review the highlighted fields.",
     notFoundTitle: "Page not found.", notFoundText: "The page you are looking for may have moved, changed, or no longer exists.", notFoundCta: "Return home", footerTagline: "Connecting Azerbaijani researchers around the world.", footerExplore: "Explore", footerConnect: "Connect", metaDescription: "Azerbaijan Research Society connects Azerbaijani researchers, students, and science enthusiasts around the world."
   },
   amil: {
@@ -701,7 +701,19 @@ if (programTabs.length) {
   programStageMeter = document.createElement("div");
   programStageMeter.className = "program-stage-meter";
   programStageMeter.setAttribute("aria-hidden", "true");
-  programStageMeter.innerHTML = '<span class="program-stage-track"><i></i></span><strong>01 / 04</strong>';
+  programStageMeter.innerHTML = `
+    <span class="program-progress-wrap">
+      <svg class="program-progress-svg" viewBox="0 0 100 8" preserveAspectRatio="none" focusable="false">
+        <defs><linearGradient id="program-progress-gradient" x1="0" x2="1"><stop offset="0" stop-color="#16a9df"/><stop offset=".36" stop-color="#ee3342"/><stop offset=".7" stop-color="#159447"/><stop offset="1" stop-color="#f4cf58"/></linearGradient></defs>
+        <path class="program-progress-base" d="M2 4H98" pathLength="100" vector-effect="non-scaling-stroke" />
+        <path class="program-progress-value" d="M2 4H98" pathLength="100" vector-effect="non-scaling-stroke" />
+      </svg>
+      <i class="program-progress-dot" data-progress-dot="0" style="--dot-position:2%"></i>
+      <i class="program-progress-dot" data-progress-dot="1" style="--dot-position:34%"></i>
+      <i class="program-progress-dot" data-progress-dot="2" style="--dot-position:66%"></i>
+      <i class="program-progress-dot" data-progress-dot="3" style="--dot-position:98%"></i>
+    </span>
+    <strong>01 / 04</strong>`;
   document.querySelector(".program-tabs")?.insertAdjacentElement("afterend", programStageMeter);
 }
 
@@ -714,17 +726,19 @@ function activateProgramStage(stage, updateHash = true) {
   });
   programPanels.forEach((panel) => {
     const active = panel.dataset.programPanel === stage;
+    panel.classList.remove("is-active");
     panel.hidden = !active;
-    if (active && !reducedMotion) {
-      panel.animate(
-        [{ opacity: 0, transform: "translateY(12px)" }, { opacity: 1, transform: "translateY(0)" }],
-        { duration: 360, easing: "cubic-bezier(.2,.75,.2,1)" }
-      );
-    }
+    if (active) requestAnimationFrame(() => {
+      if (!panel.hidden) panel.classList.add("is-active");
+    });
   });
   const activeIndex = programTabs.findIndex((tab) => tab.dataset.programTab === stage);
   if (programStageMeter && activeIndex >= 0) {
-    programStageMeter.style.setProperty("--stage-progress", `${((activeIndex + 1) / programTabs.length) * 100}%`);
+    const lineProgress = activeIndex / Math.max(programTabs.length - 1, 1);
+    programStageMeter.style.setProperty("--stage-offset", String(100 - lineProgress * 100));
+    programStageMeter.querySelectorAll("[data-progress-dot]").forEach((dot, index) => {
+      dot.classList.toggle("is-complete", index <= activeIndex);
+    });
     programStageMeter.querySelector("strong").textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(programTabs.length).padStart(2, "0")}`;
   }
   if (updateHash && window.history?.replaceState) window.history.replaceState(null, "", `#${stage}`);
@@ -823,6 +837,7 @@ function setLanguage(language) {
   if (menuButton && navigation) menuButton.setAttribute("aria-label", navigation.classList.contains("open") ? dictionary.menuClose : dictionary.menuOpen);
   if (currentProfile && profileDialog?.open) renderProfile(currentProfile);
   updateContactFormLanguage();
+  updateFormValidationLanguage();
   updateWorkshopCountdown(language);
   try { localStorage.setItem("ars-language", language); } catch (error) { /* Storage may be unavailable in private browsing. */ }
 }
@@ -874,10 +889,37 @@ function renderProfile(profileId) {
   const publications = data.publications || [];
   profilePublicationsSection.hidden = publications.length === 0;
   profilePublications.replaceChildren(...publications.map((publication) => {
+    const citation = publication.citation.trim();
+    const yearMatch = citation.match(/\((\d{4})\)\.\s*/);
+    const beforeYear = yearMatch ? citation.slice(0, yearMatch.index).replace(/[.\s]+$/, "") : "";
+    const afterYear = yearMatch ? citation.slice(yearMatch.index + yearMatch[0].length).replace(/[.\s]+$/, "") : citation;
+    const authorFirst = Boolean(beforeYear && (/\bet al\./i.test(beforeYear) || /&/.test(beforeYear) || /,\s*[A-ZİÜÖĞŞÇ][a-zəğıöşüç]*\.?/.test(beforeYear)));
+    const titleSource = authorFirst ? afterYear : beforeYear || afterYear;
+    const titleBreak = titleSource.indexOf(". ");
+    const title = titleBreak >= 0 ? titleSource.slice(0, titleBreak) : titleSource;
+    const source = titleBreak >= 0 ? titleSource.slice(titleBreak + 2) : (authorFirst ? "" : afterYear);
+    const journal = (source.split(",")[0] || "").replace(/[.\s]+$/, "");
+
     const item = document.createElement("li");
-    const citation = document.createElement("p");
-    citation.textContent = publication.citation;
-    item.append(citation, makeExternalLink(`DOI: ${publication.doi}`, `https://doi.org/${publication.doi}`));
+    item.className = "publication-card";
+    const heading = document.createElement("h4");
+    heading.className = "publication-title";
+    heading.textContent = title;
+    const meta = document.createElement("p");
+    meta.className = "publication-meta";
+    meta.textContent = [authorFirst ? beforeYear : "", yearMatch?.[1], source].filter(Boolean).join(" · ");
+    const badges = document.createElement("div");
+    badges.className = "publication-badges";
+    if (journal) {
+      const journalBadge = document.createElement("span");
+      journalBadge.className = "publication-badge";
+      journalBadge.textContent = journal;
+      badges.append(journalBadge);
+    }
+    const doiLink = makeExternalLink(`DOI ${publication.doi}`, `https://doi.org/${publication.doi}`);
+    doiLink.className = "publication-badge publication-badge-doi";
+    badges.append(doiLink);
+    item.append(heading, meta, badges);
     return item;
   }));
 }
@@ -918,6 +960,55 @@ const contactTopic = document.getElementById("contact-topic");
 const contactStatus = document.getElementById("form-status");
 const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
 const contactSubmitLabel = contactSubmitButton?.querySelector("span");
+const requiredContactFields = [...(contactForm?.querySelectorAll("[required]") || [])];
+let validationFocusScheduled = false;
+
+function validationMessageFor(field, dictionary) {
+  if (field.type === "checkbox" && field.validity.valueMissing) return dictionary.formConsentRequired;
+  if (field.validity.typeMismatch) return dictionary.formEmailInvalid;
+  if (field.validity.tooShort || (field.tagName === "TEXTAREA" && field.value.length > 0 && field.value.trim().length < Number(field.minLength))) return dictionary.formMessageShort;
+  return dictionary.formRequired;
+}
+
+function updateFieldValidity(field, announce = false) {
+  const container = field.closest(".form-field, .form-consent");
+  if (!container) return;
+  const errorId = `error-${field.id || field.name}`;
+  let error = container.querySelector(`#${CSS.escape(errorId)}`);
+  if (!error) {
+    error = document.createElement("span");
+    error.className = "form-error";
+    error.id = errorId;
+    error.hidden = true;
+    container.append(error);
+    const describedBy = new Set((field.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean));
+    describedBy.add(errorId);
+    field.setAttribute("aria-describedby", [...describedBy].join(" "));
+  }
+
+  const invalid = !field.validity.valid;
+  container.classList.toggle("is-invalid", invalid);
+  field.setAttribute("aria-invalid", String(invalid));
+  error.hidden = !invalid;
+  if (invalid) {
+    const language = document.documentElement.lang in translations ? document.documentElement.lang : "az";
+    error.textContent = validationMessageFor(field, translations[language]);
+    if (announce && !reducedMotion) {
+      container.classList.remove("is-shaking");
+      void container.offsetWidth;
+      container.classList.add("is-shaking");
+      window.setTimeout(() => container.classList.remove("is-shaking"), 360);
+    }
+  } else {
+    error.textContent = "";
+  }
+}
+
+function updateFormValidationLanguage() {
+  requiredContactFields.forEach((field) => {
+    if (field.getAttribute("aria-invalid") === "true") updateFieldValidity(field);
+  });
+}
 
 if (contactTopic) {
   const requestedTopic = new URLSearchParams(window.location.search).get("topic");
@@ -933,6 +1024,7 @@ function updateContactFormLanguage() {
   contactSubmitLabel.textContent = contactSubmitButton.disabled ? dictionary.formSending : dictionary.formSubmit;
   if (contactStatus.dataset.state === "success") contactStatus.textContent = dictionary.formSuccess;
   if (contactStatus.dataset.state === "error") contactStatus.textContent = dictionary.formError;
+  if (contactStatus.dataset.state === "validation") contactStatus.textContent = dictionary.formErrorsSummary;
 }
 
 function setContactStatus(state) {
@@ -955,6 +1047,27 @@ contactForm?.addEventListener("input", () => {
   if (contactStatus.dataset.state) setContactStatus("");
 });
 
+requiredContactFields.forEach((field) => {
+  field.addEventListener("input", () => {
+    if (field.getAttribute("aria-invalid") === "true") updateFieldValidity(field);
+  });
+  field.addEventListener("change", () => {
+    if (field.getAttribute("aria-invalid") === "true") updateFieldValidity(field);
+  });
+});
+
+contactForm?.addEventListener("invalid", (event) => {
+  event.preventDefault();
+  updateFieldValidity(event.target, true);
+  setContactStatus("validation");
+  if (validationFocusScheduled) return;
+  validationFocusScheduled = true;
+  window.setTimeout(() => {
+    contactForm.querySelector(":invalid")?.focus();
+    validationFocusScheduled = false;
+  }, 0);
+}, true);
+
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   contactSubmitButton.disabled = true;
@@ -975,6 +1088,7 @@ contactForm?.addEventListener("submit", async (event) => {
     });
     if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
     contactForm.reset();
+    requiredContactFields.forEach((field) => updateFieldValidity(field));
     setContactStatus("success");
   } catch (error) {
     setContactStatus("error");
