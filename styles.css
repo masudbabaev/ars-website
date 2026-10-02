@@ -610,10 +610,22 @@ body.loader-active { overflow: hidden; }
 .footer-links a { display: block; width: max-content; margin: 10px 0; font-size: .78rem; }
 .footer-links a:hover { color: #5bc7e9; }
 .social-links { display: flex; flex-direction: column; align-items: flex-start; }
-.social-link { display: inline-flex !important; gap: 10px; align-items: center; min-width: 135px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; transition: color .2s, background .2s, border-color .2s; }
+.social-link { display: inline-flex !important; gap: 10px; align-items: center; min-width: 135px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; transition: color .2s, background .2s, border-color .2s, transform .2s, box-shadow .2s; }
 .social-link:hover { color: white !important; background: rgba(255,255,255,.07); border-color: rgba(91,199,233,.55); }
 .social-link svg { width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .social-link span { font-weight: 750; }
+.social-links.social-icons-ready { display: grid; grid-template-columns: repeat(4, 48px); gap: 10px; align-content: start; align-items: start; }
+.social-links.social-icons-ready h3 { grid-column: 1 / -1; margin-bottom: 8px; }
+.social-icons-ready .social-link { position: relative; width: 48px; height: 48px; min-width: 0; justify-content: center; margin: 0; padding: 0; color: #dfe6ee; background: rgba(255,255,255,.035); border-color: rgba(255,255,255,.16); border-radius: 15px; }
+.social-icons-ready .social-link:hover, .social-icons-ready .social-link:focus-visible { color: white !important; border-color: transparent; box-shadow: 0 12px 26px rgba(0,0,0,.2); outline: 0; transform: translateY(-3px); }
+.social-icons-ready .social-link--email:hover, .social-icons-ready .social-link--email:focus-visible { background: #087da5; }
+.social-icons-ready .social-link--linkedin:hover, .social-icons-ready .social-link--linkedin:focus-visible { background: #0a66c2; }
+.social-icons-ready .social-link--instagram:hover, .social-icons-ready .social-link--instagram:focus-visible { background: linear-gradient(135deg, #833ab4, #fd1d1d 58%, #fcb045); }
+.social-icons-ready .social-link--youtube:hover, .social-icons-ready .social-link--youtube:focus-visible { background: #ff0033; }
+.social-icons-ready .social-link svg { width: 22px; height: 22px; }
+.social-icons-ready .social-link span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.social-icons-ready .social-link::after { content: attr(data-social-label); position: absolute; z-index: 5; left: 50%; bottom: -37px; width: max-content; max-width: 170px; padding: 6px 9px; color: white; background: #102b50; border: 1px solid rgba(255,255,255,.18); border-radius: 8px; box-shadow: 0 8px 18px rgba(0,0,0,.2); font-size: .61rem; font-weight: 750; line-height: 1.2; opacity: 0; pointer-events: none; transform: translate(-50%, -4px); transition: opacity .18s, transform .18s; }
+.social-icons-ready .social-link:hover::after, .social-icons-ready .social-link:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding-block: 20px; border-top: 1px solid rgba(255,255,255,.1); color: #71839a; font-size: .6rem; letter-spacing: .08em; }
 .footer-bottom i { display: inline-block; width: 3px; height: 3px; margin: 0 7px; background: var(--red); border-radius: 50%; }
 

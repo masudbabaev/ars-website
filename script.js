@@ -165,6 +165,28 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
   if (linkFile === currentFile) link.setAttribute("aria-current", "page");
 });
 
+const socialIconMarkup = {
+  email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7" /></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10v7M8 7.5v.1M12 17v-4c0-1.7 1-3 2.7-3 1.5 0 2.3 1 2.3 3v4M12 10v7" /></svg>',
+  instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg>',
+  youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" /><path d="m10 9 5 3-5 3z" /></svg>'
+};
+
+document.querySelectorAll(".social-links").forEach((group) => {
+  const links = [...group.querySelectorAll(".social-link")];
+  links.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    const type = href.startsWith("mailto:") ? "email" : ["linkedin", "instagram", "youtube"].find((network) => href.includes(network));
+    if (!type) return;
+    const label = link.querySelector("span")?.textContent.trim() || type;
+    link.classList.add(`social-link--${type}`);
+    link.dataset.socialLabel = label;
+    if (!link.hasAttribute("aria-label")) link.setAttribute("aria-label", label);
+    if (!link.querySelector("svg")) link.insertAdjacentHTML("afterbegin", socialIconMarkup[type]);
+  });
+  if (links.length) group.classList.add("social-icons-ready");
+});
+
 const hero = document.querySelector(".hero");
 if (hero) {
   hero.id = hero.id || "home";
@@ -536,7 +558,7 @@ const profiles = {
   masud: {
     name: "Məsud Babayev",
     roleKey: "roleCofounder",
-    image: "assets/masud.webp?v=26",
+    image: "assets/masud.webp?v=33",
     bio: {
       az: [
         "Məsud Babayev Azərbaycan Dövlət Neft və Sənaye Universitetində Neft-qaz mühəndisliyi üzrə bakalavr, Xəzər Universitetində Neft-qaz yataqlarının işlənilməsi üzrə magistr təhsili alıb. Magistratura dövründə SOCAR-da mühəndis kimi çalışıb.",
